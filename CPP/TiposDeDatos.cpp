@@ -9,6 +9,10 @@
 //libreria para el uso de printf y scanf
 #include <stdio.h>
 
+#define PI 3.1415
+
+const float pi = 3.1415;
+
 //Uso del namespace para evitar el std::
 using namespace std;
 
@@ -25,6 +29,10 @@ int main()
     
     cout << "El número entero es: " << caracter << endl;
     cout << "El tamaño del entero es: " << sizeof(caracter) << " bytes" << endl;
+
+    cout << "El valor de PI es: " << PI << endl;
+    cout << "El valor de pi es: " << pi << endl;
+
     //getchar();
     return 0;
 /*
