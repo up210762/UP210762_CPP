@@ -1,5 +1,6 @@
 import cmath
 import math as ma
+import tkinter as tk
 
 # Medidas de tendencia central
 
@@ -11,24 +12,23 @@ Vmax = 0
 xmin = 0
 Vmin = 0
 Val = 0
-limInf = 0
+limInf = []
+limSup = []
+sup = 0
 Rango = 0
+ranCat = []
 
 for i in range(longitud):
     Vmin = 0
     números = int(input("Introduce los números: "))
     Datos.append(números)
+#Selección del número máximo
+    if números > xmax:
+        xmax = números
 
 #Acomodo de datos
 for i in Datos:
     Acomodo = sorted(Datos)
-
-#Selección del número máximo
-    Vmax = 0
-    Vmax = Vmax + números
-    if Vmax > xmax:
-        xmax = 0
-        xmax = xmax + Vmax
 
 #Selección del número menor
 xmin = Acomodo[0]
@@ -37,9 +37,25 @@ xmin = Acomodo[0]
 Rango = xmax - xmin
 #Regla de Sturges
 Logaritmo = ma.log10(longitud)
-Categorias = 1 + 3.322*Logaritmo
+crudCat = 1 + 3.322*Logaritmo
+Categorias = round(crudCat)
+crudAmp = Rango/crudCat
+Amplitud = round(crudAmp)
 
-limInf = xmin
+for i in range(Categorias):
+    if i == 0:
+        limInf.append(xmin)
+        limSup.append(xmin+Amplitud)
+        ranCat.append(f"{limInf},{limSup}")
+    elif i != 0:
+        limInf.append(limSup[i-1])
+        limSup.append(limInf[i]+Amplitud)
+    elif limSup[Categorias] <= xmax:
+        limInf.append(limSup)
+        limSup.append(limSup+Amplitud)
+    
+print(f"Ampitud: {Amplitud}\nLímite inferior: {limInf}\nLímite superior: {limSup}\nCategoría: {ranCat}")
+
 
 
 '''
