@@ -11,8 +11,10 @@ ranCat = []
 frecI = []
 hi = []
 Acmxi = []
+VzaAc = 0
 frecIa = 0
 xi = 0
+xifi = 0
 Rango = 0
 frecReA = 0
 
@@ -104,7 +106,16 @@ for i in range(valor):
     Val = frecRe[i]*100
     hi.append(Val)
 
+#Varianza
+for i in range(valor):
+    Val = Val + (Acmxi[i]*frecI[i])
+x = Val/longitud
+for i in range(valor):
+    VzaAc = VzaAc + (((xi[i]-x)^2)*frecI)
+Vza = VzaAc/(longitud-1)
 
+#Desviación estándar
+Sd = cmath.sqrt(Vza)
 
 #Impresiones de pantalla
 for i in range(valor):
@@ -112,3 +123,4 @@ for i in range(valor):
 print(f"Frecuecia absoluta: {frecI}\nFrecuencia absoluta acumulada: {frecIa}")
 print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")
 print(f"Ampitud: {Amplitud}\nCategoría: {ranCat}\nValores: {Acomodo}")
+print(f"Varianza: {Vza}\nDesviación estándar: {Sd}")
