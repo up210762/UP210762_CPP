@@ -3,25 +3,27 @@ import math as ma
 
 # Variables estáticas
 longitud = int(input("¿Cuántos números introduces? "))
-frecRe = 0
-frecReA = 0
-xmax = 0
-xmin = 0
+frecRe = []
 Datos = []
 limInf = []
 limSup = []
 ranCat = []
 frecI = []
-frecIa = []
-sup = 0
+hi = []
+Acmxi = []
+frecIa = 0
 xi = 0
 Rango = 0
+frecReA = 0
 
 # Variables dinámicas
 valor = 0
 Val = 0
 Vmin = 0
 Vmax = 0
+sup = 0
+xmax = 0
+xmin = 0
 
 # Escritura de los valores
 for i in range(longitud):
@@ -72,6 +74,8 @@ for i in range(valor):
     xi = (limSup[i]+limInf[i])/2
     ranCat.append([limInf[i], limSup[i]])
     print(xi)
+    Acmxi.append(xi)
+    
 
 #Frecuencia absoluta
 for i in range(valor):
@@ -86,11 +90,25 @@ for i in range(valor):
 #Frecuencia absoluta acumulada
 valor = len(frecI)
 for i in range(valor):
-    frecIa = frecIa + frecI(i)
+    frecIa = frecIa + frecI[i]
 
 #Frecuencia relativa
 for i in range(valor):
-    frecRe = frecI[i]/longitud
+    Val = frecI[i]/longitud
+    frecRe.append(Val)
+#Frecuemcia relativa acumulada
+    frecReA = frecReA + Val
 
-print(f"Frecuecia absoluta: {frecI}")
-print(f"Ampitud: {Amplitud}\nLímite inferior: {limInf}\nLímite superior: {limSup}\nCategoría: {ranCat}\nValores: {Acomodo}")
+#Porcentaje
+for i in range(valor):
+    Val = frecRe[i]*100
+    hi.append(Val)
+
+
+
+#Impresiones de pantalla
+for i in range(valor):
+    print(f"{hi[i]}%")
+print(f"Frecuecia absoluta: {frecI}\nFrecuencia absoluta acumulada: {frecIa}")
+print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")
+print(f"Ampitud: {Amplitud}\nCategoría: {ranCat}\nValores: {Acomodo}")
