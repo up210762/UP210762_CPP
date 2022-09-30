@@ -14,8 +14,11 @@ frecI = []
 FreAc = []
 hi = []
 Acmxi = []
+MC = []
+cuartil = []
 mapa_cantidades={}
 VzaAc = 0
+media = 0
 frecIa = 0
 xi = 0
 xifi = 0
@@ -79,8 +82,8 @@ Val = len(Acomodo)
 for i in range(valor):
     fi = 0
     xi = (limSup[i]+limInf[i])/2
+    MC.append(xi)
     ranCat.append([limInf[i], limSup[i]])
-    print(xi)
     Acmxi.append(xi)
     
 
@@ -114,10 +117,12 @@ for i in range(valor):
 
 #Varianza
 for i in range(valor):
-    Val = Val + round((Acmxi[i]*frecI[i]), 4)
-x = round(Val/longitud, 4)
+    Val = Val + (Acmxi[i]*frecI[i])
+#Media
+    #media = media + Val,2
+x = Val/longitud
 for i in range(valor):
-    VzaAc = VzaAc + round(((Acmxi[i]-x)*(Acmxi[i]-x))*frecI[i], 4)
+    VzaAc = VzaAc + ((Acmxi[i]-x)*(Acmxi[i]-x))*frecI[i]
     
 Vza = round(VzaAc/(longitud-1), 4)
 
@@ -127,6 +132,12 @@ Sd = round((np.sqrt(Vza)), 4)
 #Límite inferior
 linMax = 0
 for i in range(valor):
+    print(linMax)
+    print(frecI[i])
+    print(limInf[i])
+    print(valor)
+    print(Vmin)
+    print(Vmax)
     if linMax < frecI[i]:
         linMax = limInf[i]
         xmax = frecI[i]
@@ -137,14 +148,9 @@ for i in range(valor):
             valor = limInf[i-1]
             Vmin = frecI[i-1]
             Vmax = frecI[i+1]
-    
-
-#Media
-
-
 
 #Mediana
-Val = (((longitud/2)-valor)/sup)
+Val = (((longitud/2)-valor)/xmax)
 Med = linMax + Amplitud*Val
 
 
@@ -152,8 +158,25 @@ Med = linMax + Amplitud*Val
 Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + Amplitud*Val
 
-#Cuartiles
+#Coeficiente de variación
+cV = 0
+cV = (Sd/x)*100
 
+#Cuartiles
+k = 0
+count = int(input("Escribe el número de cuartiles: "))
+for i in range(count):
+    k = k + 1
+    const = ((k*longitud)/4)
+    linMax = linMax + Amplitud
+    print(f"Límite inferior: {linMax}")
+    div = ((const-valor)/xmax)
+    mult = Amplitud * div
+    Val = linMax + mult
+    cuartil.append(Val)
+print(cuartil)
+
+"""
 #Impresión de gráficas
 print("1) histograma\n2) caja y bigote\n3) de puntos")
 enter = input()
@@ -171,9 +194,20 @@ while enter < 4 and enter > 0:
 
 #Impresiones de pantalla
 for i in range(valor):
-    print(f"{hi[i]}%")
-print(f"Frecuecia absoluta: {frecI}\nFrecuencia absoluta acumulada: {frecIa}")
-print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")
-print(f"Ampitud: {Amplitud}\nCategoría: {ranCat}\nValores: {Acomodo}")
-print(f"Varianza: {Vza}\nDesviación estándar: {Sd}")
-print(f"Limite inferior: {linMax}")
+    print(f"{hi[i]}%\n")
+print(f"Marca de clase: {MC}\n")
+print(f"Frecuecia absoluta: {frecI}\n")
+print(f"Frecuencia absoluta acumulada: {frecIa}\n")
+print(f"Frecuencia relativa: {frecRe}\n")
+print(f"Frecuencia relativa acumulada: {frecReA}\n")
+print(f"Ampitud: {Amplitud}\n")
+print(f"Categoría: {ranCat}\n")
+print(f"Valores: {Acomodo}\n")
+print(f"Varianza: {Vza}\n")
+print(f"Desviación estándar: {Sd}\n")
+print(f"Media: {x}\n")
+print(f"Mediana: {Med}\n")
+print(f"Moda: {Mod}\n")
+print(f"Coeficiente de variación: {cV}")
+print(f"Cuartiles: {cuartil}")
+"""
