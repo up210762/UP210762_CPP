@@ -29,7 +29,8 @@ valor = 0
 Val = 0
 Vmin = 0
 Vmax = 0
-sup = 0
+parentesis = 0
+contador = 0
 xmax = 0
 xmin = 0
 
@@ -105,7 +106,7 @@ valor = len(frecI)
 for i in range(valor):
     frecIa = frecIa + frecI[i]
     FreAc.append(frecIa)
-print(f"Las frecuencias absoluta acumulada son: {FreAc}")
+print(f"Las frecuencias absolutas acumuladas son: {FreAc}")
 
 
 #Frecuencia relativa
@@ -125,45 +126,47 @@ for i in range(valor):
 #Varianza
 for i in range(valor):
     Val = Val + (MC[i]*frecI[i])
-    print(f"Dato para la varianza: {Val}")
+    print(f"Sumatoria para el valor de la varianza: {Val}")
 #Media
     #media = media + Val,2
 x = Val/longitud
-print(f"")
+print(f"Valor para la varianza: {x}")
 for i in range(valor):
     VzaAc = VzaAc + ((MC[i]-x)*(MC[i]-x))*frecI[i]
-    print(f"")
+print(f"Sumatoria para la varianza {VzaAc}")
     
 Vza = round(VzaAc/(longitud-1), 4)
+print(f"La varianza es: {Vza}")
 
 #Desviación estándar
 Sd = round((np.sqrt(Vza)), 4)
-
-#Límite inferior
-linMax = 0
-for i in range(valor):
-    print(linMax)
-    print(frecI[i])
-    print(limInf[i])
-    print(valor)
-    print(Vmin)
-    print(Vmax)
-    if linMax < frecI[i]:
-        linMax = limInf[i]
-        xmax = frecI[i]
-        if (i - 1) < 0:
-            valor = 0
-            Vmin = 0
-        else:
-            valor = limInf[i-1]
-            Vmin = frecI[i-1]
-            Vmax = frecI[i+1]
+print(f"La desviación estándar es: {Sd}")
 
 #Mediana
-Val = (((longitud/2)-valor)/xmax)
-Med = linMax + Amplitud*Val
+#Límite inferior
+linMax = 0
+contador = len(frecI)
+print(contador)
 
-
+for i in frecI:
+    while i > 0 and i <= contador:
+        if linMax < limInf[i]:
+            linMax = limInf[i]
+            Vmin = FreAc[i-1]
+            Vmax = limInf[i+1]
+            xmax = frecI[i]
+    if linMax == limInf[0]:
+        if linMax < limInf[i]:
+            linMax = limInf[i]
+            Vmin = 0
+            Vmax = limInf[i+1]
+            xmax = frecI[i]
+print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")
+#Fórmula    
+parentesis = (((longitud/2)-Vmin)/xmax)
+Med = linMax + (Amplitud*parentesis)
+print(f"Media: {Med}")
+'''
 #Moda
 Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + Amplitud*Val
@@ -172,7 +175,7 @@ Mod = linMax + Amplitud*Val
 cV = 0
 cV = (Sd/x)*100
 
-'''
+
 #Cuartiles
 k = 0
 count = int(input("Escribe el número de cuartiles: "))
