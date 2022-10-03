@@ -13,7 +13,6 @@ ranCat = []
 frecI = []
 FreAc = []
 hi = []
-Acmxi = []
 MC = []
 cuartil = []
 mapa_cantidades={}
@@ -76,6 +75,9 @@ if limSup[valor] <= xmax:
     limInf.append(Vmax)
     limSup.append(Vmax+Amplitud)
 
+print(f"Constante sin redondear: {crudCat}\nConstante redondeada: {Categorias}")
+print(f"La amplitud sin redondear es: {crudAmp}\nLa amplitud redondeada es: {Amplitud}")
+
 #Obtener categorías
 valor = len(limInf)
 Val = len(Acomodo)
@@ -84,24 +86,27 @@ for i in range(valor):
     xi = (limSup[i]+limInf[i])/2
     MC.append(xi)
     ranCat.append([limInf[i], limSup[i]])
-    Acmxi.append(xi)
-    
+print(f"Los límites inferiores son: {limInf}\nMarcas de clase: {MC}\nRango de categorías: {ranCat}\n")  
 
 #Frecuencia absoluta
 for i in range(valor):
     fi = 0
     Vmin = limInf[i]
     Vmax = limSup[i]
+    print(f"Valor máximo de la categoría: {Vmax}\nValor mínimo de la categoría: {Vmin}")
     for j in range(Val):
         if Acomodo[j] < Vmax and Acomodo[j] >= Vmin:
             fi = fi + 1
     frecI.append(fi)
+print(f"Las frecuencias absolutas son: {frecI}")
 
 #Frecuencia absoluta acumulada
 valor = len(frecI)
 for i in range(valor):
     frecIa = frecIa + frecI[i]
     FreAc.append(frecIa)
+print(f"Las frecuencias absoluta acumulada son: {FreAc}")
+
 
 #Frecuencia relativa
 for i in range(valor):
@@ -109,20 +114,25 @@ for i in range(valor):
     frecRe.append(Val)
 #Frecuemcia relativa acumulada
     frecReA = frecReA + Val
+print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")
 
 #Porcentaje
 for i in range(valor):
-    Val = frecRe[i]*100
+    Val = round(frecRe[i]*100, 0)
     hi.append(Val)
+    print(f"Porcentajes: {Val}%")
 
 #Varianza
 for i in range(valor):
-    Val = Val + (Acmxi[i]*frecI[i])
+    Val = Val + (MC[i]*frecI[i])
+    print(f"Dato para la varianza: {Val}")
 #Media
     #media = media + Val,2
 x = Val/longitud
+print(f"")
 for i in range(valor):
-    VzaAc = VzaAc + ((Acmxi[i]-x)*(Acmxi[i]-x))*frecI[i]
+    VzaAc = VzaAc + ((MC[i]-x)*(MC[i]-x))*frecI[i]
+    print(f"")
     
 Vza = round(VzaAc/(longitud-1), 4)
 
@@ -162,6 +172,7 @@ Mod = linMax + Amplitud*Val
 cV = 0
 cV = (Sd/x)*100
 
+'''
 #Cuartiles
 k = 0
 count = int(input("Escribe el número de cuartiles: "))
@@ -211,3 +222,4 @@ print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}")
 print(f"Cuartiles: {cuartil}")
 """
+'''
