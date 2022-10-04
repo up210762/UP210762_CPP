@@ -163,23 +163,24 @@ for i in frecI:
         if linMax < limInf[i]:
             Vmin = FreAc[i-1]
             vmin = frecI[i-1]
-            Vmax = limInf[i+1]
+            Vmax = frecI[i+1]
             xmax = frecI[i]
 print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")
 #Fórmula    
 parentesis = (((longitud/2)-Vmin)/xmax)
 Med = linMax + (Amplitud*parentesis)
 print(f"Media: {Med}")
-'''
+
 #Moda
-Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
-Mod = linMax + Amplitud*Val
+Val = ((xmax-Vmin)/((xmax-vmin)+(xmax-Vmax)))
+Mod = linMax + (Amplitud*Val)
+print(f"La moda es: {Mod}")
 
 #Coeficiente de variación
 cV = 0
-cV = (Sd/x)*100
-
-
+cV = (Sd/(longitud-1))*100
+print(f"El coeficiete de variación es: {cV}")
+'''
 #Cuartiles
 k = 0
 count = int(input("Escribe el número de cuartiles: "))
