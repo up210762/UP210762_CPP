@@ -28,9 +28,11 @@ frecReA = 0
 valor = 0
 Val = 0
 Vmin = 0
+vmin = 0
 Vmax = 0
 parentesis = 0
 contador = 0
+controlador = 0
 xmax = 0
 xmin = 0
 
@@ -149,16 +151,18 @@ contador = len(frecI)
 print(contador)
 
 for i in frecI:
-    while i > 0 and i <= contador:
-        if linMax < limInf[i]:
-            linMax = limInf[i]
-            Vmin = FreAc[i-1]
-            Vmax = limInf[i+1]
+    if frecI[i] > controlador:
+        contolador = frecI[i]
+        linMax = limInf[i]
+        if limInf[i] == limInf[0]:
+            Vmin = 0
+            vmin = frecI[i]
+            Vmax = frecI[i+1]
             xmax = frecI[i]
     if linMax == limInf[0]:
         if linMax < limInf[i]:
-            linMax = limInf[i]
-            Vmin = 0
+            Vmin = FreAc[i-1]
+            vmin = frecI[i-1]
             Vmax = limInf[i+1]
             xmax = frecI[i]
 print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")
