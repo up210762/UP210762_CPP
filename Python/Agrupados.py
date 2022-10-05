@@ -1,7 +1,6 @@
 import numpy as np
 import math as ma
 import fnmatch
-import matplotlib
 
 # Variables estáticas
 longitud = int(input("¿Cuántos números introduces? "))
@@ -150,16 +149,15 @@ linMax = 0
 contador = len(frecI)
 print(contador)
 
-for i in frecI:
+for i in range(contador):
     if frecI[i] > controlador:
-        contolador = frecI[i]
+        controlador = frecI[i]
         linMax = limInf[i]
-        if limInf[i] == limInf[0]:
+        if linMax == limInf[0]:
             Vmin = 0
             vmin = frecI[i]
             Vmax = frecI[i+1]
             xmax = frecI[i]
-    if linMax == limInf[0]:
         if linMax < limInf[i]:
             Vmin = FreAc[i-1]
             vmin = frecI[i-1]
@@ -178,8 +176,8 @@ print(f"La moda es: {Mod}")
 
 #Coeficiente de variación
 cV = 0
-cV = (Sd/(longitud-1))*100
-print(f"El coeficiete de variación es: {cV}")
+cV = round((Sd/(x))*100,2)
+print(f"El coeficiete de variación es: {cV}%")
 '''
 #Cuartiles
 k = 0
