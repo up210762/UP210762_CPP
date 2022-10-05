@@ -77,8 +77,8 @@ if limSup[valor] <= xmax:
     limInf.append(Vmax)
     limSup.append(Vmax+Amplitud)
 
-print(f"Constante sin redondear: {crudCat}\nConstante redondeada: {Categorias}")
-print(f"La amplitud sin redondear es: {crudAmp}\nLa amplitud redondeada es: {Amplitud}")
+###print(f"Constante sin redondear: {crudCat}\nConstante redondeada: {Categorias}")###
+###print(f"La amplitud sin redondear es: {crudAmp}\nLa amplitud redondeada es: {Amplitud}")###
 
 #Obtener categorías
 valor = len(limInf)
@@ -88,26 +88,26 @@ for i in range(valor):
     xi = (limSup[i]+limInf[i])/2
     MC.append(xi)
     ranCat.append([limInf[i], limSup[i]])
-print(f"Los límites inferiores son: {limInf}\nMarcas de clase: {MC}\nRango de categorías: {ranCat}\n")  
+###print(f"Los límites inferiores son: {limInf}\nMarcas de clase: {MC}\nRango de categorías: {ranCat}\n")###
 
 #Frecuencia absoluta
 for i in range(valor):
     fi = 0
     Vmin = limInf[i]
     Vmax = limSup[i]
-    print(f"Valor máximo de la categoría: {Vmax}\nValor mínimo de la categoría: {Vmin}")
+    ###print(f"Valor máximo de la categoría: {Vmax}\nValor mínimo de la categoría: {Vmin}")###
     for j in range(Val):
         if Acomodo[j] < Vmax and Acomodo[j] >= Vmin:
             fi = fi + 1
     frecI.append(fi)
-print(f"Las frecuencias absolutas son: {frecI}")
+###print(f"Las frecuencias absolutas son: {frecI}")###
 
 #Frecuencia absoluta acumulada
 valor = len(frecI)
 for i in range(valor):
     frecIa = frecIa + frecI[i]
     FreAc.append(frecIa)
-print(f"Las frecuencias absolutas acumuladas son: {FreAc}")
+###print(f"Las frecuencias absolutas acumuladas son: {FreAc}")###
 
 
 #Frecuencia relativa
@@ -116,34 +116,31 @@ for i in range(valor):
     frecRe.append(Val)
 #Frecuemcia relativa acumulada
     frecReA = frecReA + Val
-print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")
+###print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")###
 
 #Porcentaje
 for i in range(valor):
     Val = round(frecRe[i]*100, 0)
     hi.append(Val)
-    print(f"Porcentajes: {Val}%")
+ ###print(f"Porcentajes: {Val}%")###
 
 #Varianza
 for i in range(valor):
     Val = Val + (MC[i]*frecI[i])
     print(f"Sumatoria para el valor de la varianza: {Val}")
-#Media
-    #media = media + Val,2
+
 x = Val/longitud
-print(f"Valor para la varianza: {x}")
+###print(f"Valor para la varianza: {x}")###
 for i in range(valor):
     VzaAc = VzaAc + ((MC[i]-x)*(MC[i]-x))*frecI[i]
-print(f"Sumatoria para la varianza {VzaAc}")
-    
+###print(f"Sumatoria para la varianza {VzaAc}")###    
 Vza = round(VzaAc/(longitud-1), 4)
-print(f"La varianza es: {Vza}")
+###print(f"La varianza es: {Vza}")###
 
 #Desviación estándar
 Sd = round((np.sqrt(Vza)), 4)
-print(f"La desviación estándar es: {Sd}")
+###print(f"La desviación estándar es: {Sd}")###
 
-#Mediana
 #Límite inferior
 linMax = 0
 contador = len(frecI)
@@ -163,21 +160,21 @@ for i in range(contador):
             vmin = frecI[i-1]
             Vmax = frecI[i+1]
             xmax = frecI[i]
-print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")
+###print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")###
 #Fórmula    
 parentesis = (((longitud/2)-Vmin)/xmax)
 Med = linMax + (Amplitud*parentesis)
-print(f"Media: {Med}")
+#print(f"Media: {Med}")
 
 #Moda
 Val = ((xmax-Vmin)/((xmax-vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
-print(f"La moda es: {Mod}")
+###print(f"La moda es: {Mod}")###
 
 #Coeficiente de variación
 cV = 0
 cV = round((Sd/(x))*100,2)
-print(f"El coeficiete de variación es: {cV}%")
+###print(f"El coeficiete de variación es: {cV}%")###
 '''
 #Cuartiles
 k = 0
@@ -206,8 +203,8 @@ while enter < 4 and enter > 0:
                 mapa_cantidades[i] = 1
         for j in sorted(mapa_cantidades):
             print(f'{j}: {mapa_cantidades[j]}')
-
-
+"""
+'''
 
 #Impresiones de pantalla
 for i in range(valor):
@@ -226,6 +223,4 @@ print(f"Media: {x}\n")
 print(f"Mediana: {Med}\n")
 print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}")
-print(f"Cuartiles: {cuartil}")
-"""
-'''
+#print(f"Cuartiles: {cuartil}")
