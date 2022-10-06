@@ -188,7 +188,12 @@ count = int(input("Escribe el número de cuartiles: "))
 for i in range(count):
     contador = contador + 1
     const = ((contador*longitud)/4)
-    conCuart.append(const)
+    for j in range(controlador):
+        while a == 0:
+            if FreAc[j] > const:
+                conCuart.append(FreAc[j])
+                a = a + 1
+    a = 0
 print(conCuart)
 Vmin = 0
 Vmax = 0
