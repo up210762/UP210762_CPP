@@ -1,3 +1,4 @@
+from distutils.command.clean import clean
 import numpy as np
 import math as ma
 import fnmatch
@@ -9,6 +10,7 @@ Datos = []
 limInf = []
 limSup = []
 ranCat = []
+conCuart = []
 frecI = []
 FreAc = []
 hi = []
@@ -122,12 +124,12 @@ for i in range(valor):
 for i in range(valor):
     Val = round(frecRe[i]*100, 0)
     hi.append(Val)
- ###print(f"Porcentajes: {Val}%")###
+print(f"Porcentajes: {Val}%")
 
 #Varianza
 for i in range(valor):
     Val = Val + (MC[i]*frecI[i])
-    print(f"Sumatoria para el valor de la varianza: {Val}")
+    ###print(f"Sumatoria para el valor de la varianza: {Val}")###
 
 x = Val/longitud
 ###print(f"Valor para la varianza: {x}")###
@@ -144,7 +146,7 @@ Sd = round((np.sqrt(Vza)), 4)
 #Límite inferior
 linMax = 0
 contador = len(frecI)
-print(contador)
+print()
 
 for i in range(contador):
     if frecI[i] > controlador:
@@ -175,21 +177,31 @@ Mod = linMax + (Amplitud*Val)
 cV = 0
 cV = round((Sd/(x))*100,2)
 ###print(f"El coeficiete de variación es: {cV}%")###
-'''
-#Cuartiles
-k = 0
-count = int(input("Escribe el número de cuartiles: "))
-for i in range(count):
-    k = k + 1
-    const = ((k*longitud)/4)
-    linMax = linMax + Amplitud
-    print(f"Límite inferior: {linMax}")
-    div = ((const-valor)/xmax)
-    mult = Amplitud * div
-    Val = linMax + mult
-    cuartil.append(Val)
-print(cuartil)
 
+#Cuartiles (Se toma a partir del intervalo que contiene las frecuencias absolutas)
+k = 0
+a = 0
+controlador = len(FreAc)
+contador = 0
+count = int(input("Escribe el número de cuartiles: "))
+#Para determinar el límite inferior del cuartil:
+for i in range(count):
+    contador = contador + 1
+    const = ((contador*longitud)/4)
+    conCuart.append(const)
+print(conCuart)
+Vmin = 0
+Vmax = 0
+for i in range(count):
+    if const < FreAc[i] and const > Vmax:
+        Vmax = FreAc[i]
+        Val = limInf[i]
+    cuartil.append(Val)
+a = a + 1
+print(cuartil)
+cout()
+
+'''
 """
 #Impresión de gráficas
 print("1) histograma\n2) caja y bigote\n3) de puntos")
@@ -204,7 +216,6 @@ while enter < 4 and enter > 0:
         for j in sorted(mapa_cantidades):
             print(f'{j}: {mapa_cantidades[j]}')
 """
-'''
 
 #Impresiones de pantalla
 for i in range(valor):
@@ -222,5 +233,6 @@ print(f"Desviación estándar: {Sd}\n")
 print(f"Media: {x}\n")
 print(f"Mediana: {Med}\n")
 print(f"Moda: {Mod}\n")
-print(f"Coeficiente de variación: {cV}")
+print(f"Coeficiente de variación: {cV}%\n")
 #print(f"Cuartiles: {cuartil}")
+'''
