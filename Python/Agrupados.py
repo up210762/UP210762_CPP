@@ -178,6 +178,7 @@ cV = 0
 cV = round((Sd/(x))*100,2)
 ###print(f"El coeficiete de variación es: {cV}%")###
 
+'''
 #Cuartiles (Se toma a partir del intervalo que contiene las frecuencias absolutas)
 k = 0
 a = 0
@@ -193,7 +194,7 @@ for i in range(count):
             if FreAc[j] > const:
                 conCuart.append(FreAc[j])
                 a = a + 1
-    a = 0
+a = 0
 print(conCuart)
 Vmin = 0
 Vmax = 0
@@ -206,7 +207,6 @@ a = a + 1
 print(cuartil)
 cout()
 
-'''
 """
 #Impresión de gráficas
 print("1) histograma\n2) caja y bigote\n3) de puntos")
@@ -221,6 +221,7 @@ while enter < 4 and enter > 0:
         for j in sorted(mapa_cantidades):
             print(f'{j}: {mapa_cantidades[j]}')
 """
+'''
 
 #Impresiones de pantalla
 for i in range(valor):
@@ -240,4 +241,4 @@ print(f"Mediana: {Med}\n")
 print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}%\n")
 #print(f"Cuartiles: {cuartil}")
-'''
+cout()
