@@ -31,6 +31,7 @@ Val = 0
 Vmin = 0
 vmin = 0
 Vmax = 0
+vmax = 0
 parentesis = 0
 contador = 0
 controlador = 0
@@ -169,15 +170,25 @@ Med = linMax + (Amplitud*parentesis)
 #print(f"Media: {Med}")
 
 #Moda
+controlador = 0
+for i in range(Categorias):
+    if frecI[i] > controlador:
+        controlador = frecI[i]
+        vmin = frecI[i-1]
+        vmax = frecI[i+1]
+xmax = controlador
+Vmin = valor
+Vmax
+
 Val = ((xmax-Vmin)/((xmax-vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
-###print(f"La moda es: {Mod}")###
+print(f"La moda es: {Mod}")
 
 #Coeficiente de variación
 cV = 0
 cV = round((Sd/(x))*100,2)
 ###print(f"El coeficiete de variación es: {cV}%")###
-
+'''
 #Impresiones de pantalla
 for i in range(valor):
     print(f"{hi[i]}%\n")
@@ -186,7 +197,6 @@ print(f"Frecuecia absoluta: {frecI}\n")
 print(f"Frecuencia absoluta acumulada: {frecIa}\n")
 print(f"Frecuencia relativa: {frecRe}\n")
 print(f"Frecuencia relativa acumulada: {frecReA}\n")
-print(f"Ampitud: {Amplitud}\n")
 print(f"Categoría: {ranCat}\n")
 print(f"Valores: {Acomodo}\n")
 print(f"Varianza: {Vza}\n")
@@ -195,10 +205,11 @@ print(f"Media: {x}\n")
 print(f"Mediana: {Med}\n")
 print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}%\n")
-print("Para la varianza introduce los siguientes valores en el programa Cuartiles")
-print("Para los cuartiles: 3")
+print("Para los cuartiles introduce los siguientes valores en el programa Cuartiles")
+print("Cantidad de cuartiles: 3")
 print(f"Cantidad de valores: {longitud}")
 print(f"El total de categorías es: {Categorias}")
 print(f"Las frecuencias absolutas son: {frecI}")
-print(f"Las frecuencias absolutas acumuladas son: {FreAc}")
-print
+print(f"Los límites inferiores a introducir son {linMax}")
+print(f"La amplitud es: {Amplitud}")
+'''
