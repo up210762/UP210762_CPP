@@ -178,51 +178,6 @@ cV = 0
 cV = round((Sd/(x))*100,2)
 ###print(f"El coeficiete de variación es: {cV}%")###
 
-'''
-#Cuartiles (Se toma a partir del intervalo que contiene las frecuencias absolutas)
-k = 0
-a = 0
-controlador = len(FreAc)
-contador = 0
-count = int(input("Escribe el número de cuartiles: "))
-#Para determinar el límite inferior del cuartil:
-for i in range(count):
-    contador = contador + 1
-    const = ((contador*longitud)/4)
-    for j in range(controlador):
-        while a == 0:
-            if FreAc[j] > const:
-                conCuart.append(FreAc[j])
-                a = a + 1
-a = 0
-print(conCuart)
-Vmin = 0
-Vmax = 0
-for i in range(count):
-    if const < FreAc[i] and const > Vmax:
-        Vmax = FreAc[i]
-        Val = limInf[i]
-    cuartil.append(Val)
-a = a + 1
-print(cuartil)
-cout()
-
-"""
-#Impresión de gráficas
-print("1) histograma\n2) caja y bigote\n3) de puntos")
-enter = input()
-while enter < 4 and enter > 0:
-    if enter == "1":
-        for i in Acomodo:
-            if i in mapa_cantidades:
-                mapa_cantidades[i] += 1
-            else:
-                mapa_cantidades[i] = 1
-        for j in sorted(mapa_cantidades):
-            print(f'{j}: {mapa_cantidades[j]}')
-"""
-'''
-
 #Impresiones de pantalla
 for i in range(valor):
     print(f"{hi[i]}%\n")
@@ -240,5 +195,10 @@ print(f"Media: {x}\n")
 print(f"Mediana: {Med}\n")
 print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}%\n")
+print("Para la varianza introduce los siguientes valores en el programa Cuartiles")
+print("Para los cuartiles: 3")
+print(f"Cantidad de valores: {longitud}")
 print(f"El total de categorías es: {Categorias}")
-#print(f"Cuartiles: {cuartil}")
+print(f"Las frecuencias absolutas son: {frecI}")
+print(f"Las frecuencias absolutas acumuladas son: {FreAc}")
+print
