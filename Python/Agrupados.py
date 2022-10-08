@@ -178,11 +178,21 @@ for i in range(Categorias):
         vmax = frecI[i+1]
 xmax = controlador
 Vmin = valor
-Vmax
+Vmax = vmax
 
-Val = ((xmax-Vmin)/((xmax-vmin)+(xmax-Vmax)))
+Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
-print(f"La moda es: {Mod}")
+###print(f"La moda es: {Mod}")###
+
+#Media
+controlador = longitud / 2
+for i in range(Categorias):
+    if controlador <= FreAc[i] and controlador > FreAc[i-1]:
+        vmin = FreAc[i-1]
+        vmax = frecI[i]
+
+Val = ((controlador-vmin)/vmax)
+Med = linMax + (Amplitud*Val)
 
 #Coeficiente de variación
 cV = 0
