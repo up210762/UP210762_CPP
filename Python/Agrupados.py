@@ -177,9 +177,8 @@ for i in range(Categorias):
         vmin = frecI[i-1]
         vmax = frecI[i+1]
 xmax = controlador
-Vmin = valor
+Vmin = vmin
 Vmax = vmax
-
 Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
 ###print(f"La moda es: {Mod}")###
@@ -190,7 +189,7 @@ for i in range(Categorias):
     if controlador <= FreAc[i] and controlador > FreAc[i-1]:
         vmin = FreAc[i-1]
         vmax = frecI[i]
-
+        linMax = limInf[i]
 Val = ((controlador-vmin)/vmax)
 Med = linMax + (Amplitud*Val)
 
@@ -198,7 +197,22 @@ Med = linMax + (Amplitud*Val)
 cV = 0
 cV = round((Sd/(x))*100,2)
 ###print(f"El coeficiete de variación es: {cV}%")###
-'''
+
+#Límites inferiores para los cuartiles
+controlador = 0
+contador = 0
+xmax = 3
+for i in range(xmax):
+    contador = contador + 1
+    controlador = ((contador*longitud)/4)
+    conCuart.append(controlador)
+
+for i in range(xmax):
+    for j in range(Categorias):
+        if conCuart[i] < FreAc[j] and conCuart[i] >= FreAc[j-1]:
+            linMax = limInf[j]
+    cuartil.append(linMax)
+
 #Impresiones de pantalla
 for i in range(valor):
     print(f"{hi[i]}%\n")
@@ -220,6 +234,5 @@ print("Cantidad de cuartiles: 3")
 print(f"Cantidad de valores: {longitud}")
 print(f"El total de categorías es: {Categorias}")
 print(f"Las frecuencias absolutas son: {frecI}")
-print(f"Los límites inferiores a introducir son {linMax}")
+print(f"Los límites inferiores a introducir son {cuartil}")
 print(f"La amplitud es: {Amplitud}")
-'''

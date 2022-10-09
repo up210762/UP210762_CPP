@@ -49,6 +49,6 @@ for i in range(count):
 
 
 for i in range(count):
-    contador = (limInf[i]+(Amplitud*(const[i]-Fi[i])/fi[i]))
+    contador = round((limInf[i]+(Amplitud*(const[i]-Fi[i])/fi[i])), 3)
     cuartil.append(contador)
 print(cuartil)
