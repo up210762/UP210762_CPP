@@ -1,12 +1,13 @@
-up210762
-
+UP210762
 Dónovan Alonso Hernández Carmona
+
+<center>
 
 ![Screenshot](719179.png)
 
 <h1>-----------------------------------------------------<h1>
 
-![Wallpaper](mylivewallpapers-com-Vegeta.mp4)
+![Imagen](mylivewallpapers-com-Vegeta.mp4)
 
 <h1>-----------------------------------------------------<h1>
 
