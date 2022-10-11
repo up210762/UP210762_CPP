@@ -11,4 +11,4 @@ Dónovan Alonso Hernández Carmona
 
 <br>
 
-![Imagen](mylivewallpapers-com-Vegeta.gif)
+![Imagen](/mylivewallpapers-com-Vegeta.gif)
