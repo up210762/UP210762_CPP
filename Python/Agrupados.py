@@ -1,4 +1,3 @@
-from distutils.command.clean import clean
 import numpy as np
 import math as ma
 import fnmatch

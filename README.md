@@ -7,7 +7,7 @@ Dónovan Alonso Hernández Carmona
 
 <h1>-----------------------------------------------------<h1>
 
-![Imagen](https://www.youtube.com/watch?v=cqbxQRP7e1Y)
+![Imagen]()
 
 <h1>-----------------------------------------------------<h1>
 
