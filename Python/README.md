@@ -41,7 +41,7 @@
 <br>
 <h3><div align = "left">Esta fórmula es un poco más dificil que las anteriores, pues se debe obtener el límite inferior, número anterior a la frecuencia absoluta más alta y también el número que le sigue. Para resolver este problema se diseñó un algoritmo capaz de hacer la búsqueda de manera automática.</div></h3>
 <br>
-<h1>Medidas de dispersión</h1>
+<h1><div align = "left">Medidas de dispersión</div></h1>
 <br>
 <h2>Varianza</h2>
 
@@ -49,13 +49,21 @@
 
 <br>
 
-<h2>|</h2>
-
 ![IMAGEN](/CODIGO%20VARIANZA.png)
 <br>
 <h3><div align = "left">Primero se realiza una sumatoria de la multiplicación de las marcas de clase por las frecuencias absolutas y se dividen entre la longitud para sacar la media aritmética. Después se hace la sumatoria del la multiplicación de las frecuencias absolutas por el cuadrado de las diferencias de las marcas de clase menos la media aritmética. Por último, se dividirá el resultado de lo anterior entre el total de números introducidos menos uno.</div></h3>
 <br>
+<h2>Desviación estándar</h2>
+<br>
 
+![IMAGEN](/DESVIACI%C3%93N%20EST%C3%81NDAR.png)
+
+<br>
+
+![IMAGEN](/CODIGO%20DESVIACI%C3%93N%20EST%C3%81NDAR.png)
+<br>
+<h3><div align = "left">Para obtener la desviación estándar se debe sacar la raíz cuadrada de la varianza, para ello se utilizó la librería numpy.</div></h3>
+<br>
 <h2>Coeficiente de variación</h2>
 <br>
 
@@ -68,18 +76,6 @@
 <br>
 <h3><div align = "left">Para el cociente de variación solo se divide la desviación estándar entre la media aritmética y el resultado se multiplica por cien, dejando un resultado porcentual.</div></h3>
 <br>
-<h2>Deviación estándar</h2>
-<br>
-
-![IMAGEN](/DESVIACI%C3%93N%20EST%C3%81NDAR.png)
-
-<br>
-
-<h2>|</h2>
-
-![IMAGEN](/)
-<br>
-<h3><div align = "left">.</div></h3>
-<br>
-
 </center>
+
+<h1>Nota: todas las impresiones de pantalla, excepto los porcentajes para la tabla de frecuencias, se encuentran al final del programa.

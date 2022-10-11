@@ -143,7 +143,6 @@ Sd = round((np.sqrt(Vza)), 4)
 #Límite inferior
 linMax = 0
 contador = len(frecI)
-print()
 
 for i in range(contador):
     if frecI[i] > controlador:
