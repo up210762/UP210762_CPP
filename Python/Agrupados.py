@@ -129,21 +129,16 @@ print(f"Porcentajes: {Val}%")
 #Varianza
 for i in range(valor):
     Val = Val + (MC[i]*frecI[i])
-    ###print(f"Sumatoria para el valor de la varianza: {Val}")###
 
 #Media
 x = Val/longitud
-###print(f"Valor de la media: {x}")###
 
 for i in range(valor):
     VzaAc = VzaAc + ((MC[i]-x)*(MC[i]-x))*frecI[i]
-###print(f"Sumatoria para la varianza {VzaAc}")###    
 Vza = round(VzaAc/(longitud-1), 4)
-###print(f"La varianza es: {Vza}")###
 
 #Desviación estándar
 Sd = round((np.sqrt(Vza)), 4)
-###print(f"La desviación estándar es: {Sd}")###
 
 #Límite inferior
 linMax = 0
@@ -164,11 +159,10 @@ for i in range(contador):
             vmin = frecI[i-1]
             Vmax = frecI[i+1]
             xmax = frecI[i]
-###print(f"Limite inferior: {linMax}\n{Vmin}\n{Vmax}\nDivisor: {xmax}")###
+
 #Fórmula    
 parentesis = (((longitud/2)-Vmin)/xmax)
 Med = linMax + (Amplitud*parentesis)
-#print(f"Media: {Med}")
 
 #Moda
 controlador = 0

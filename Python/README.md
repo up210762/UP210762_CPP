@@ -51,10 +51,11 @@
 
 <h2>|</h2>
 
-![IMAGEN](/)
+![IMAGEN](/CODIGO%20VARIANZA.png)
 <br>
-<h3><div align = "left">.</div></h3>
+<h3><div align = "left">Primero se realiza una sumatoria de la multiplicación de las marcas de clase por las frecuencias absolutas y se dividen entre la longitud para sacar la media aritmética. Después se hace la sumatoria del la multiplicación de las frecuencias absolutas por el cuadrado de las diferencias de las marcas de clase menos la media aritmética. Por último, se dividirá el resultado de lo anterior entre el total de números introducidos menos uno.</div></h3>
 <br>
+
 <h2>Coeficiente de variación</h2>
 <br>
 
@@ -62,11 +63,10 @@
 
 <br>
 
-<h2>|</h2>
 
-![IMAGEN](/)
+![IMAGEN](/CODIGO%20COFICIENTE%20DE%20VARIACI%C3%93N.png)
 <br>
-<h3><div align = "left">.</div></h3>
+<h3><div align = "left">Para el cociente de variación solo se divide la desviación estándar entre la media aritmética y el resultado se multiplica por cien, dejando un resultado porcentual.</div></h3>
 <br>
 <h2>Deviación estándar</h2>
 <br>
