@@ -78,4 +78,19 @@
 <br>
 </center>
 
-<h1>Nota: todas las impresiones de pantalla, excepto los porcentajes para la tabla de frecuencias, se encuentran al final del programa.
+<h1>Nota: todas las impresiones de pantalla, excepto los porcentajes para la tabla de frecuencias, se encuentran al final del programa.</h1>
+<h1>Nota 2: el programa aún está inompleto y podría causar errores en los resultados al momento de ejecutarlo.</h1>
+<br>
+<center><h1>Cuartiles.py<h1></center>
+<h3>Para este programa se generó un código con muchas condicionales, pues son requeridas para obtener el resultado correcto de los cuartiles siguiendo la siguiente fórmula:</h3>
+
+<center>
+
+![IMAGEN](/CUARTILES.png)
+
+![IMAGEN](/CODIGO%20CUARTILES.png)
+
+<br>
+<h3><div align = "left">El "controlador" del cuartil proviene a partir de la operación k*N/4, pues el resultado que genere se tendrá que buscar que entre en las frecuencias absolutas acumuladas. Derivado de ello es que cambiarán los valores.</div></h3>
+
+</center>
