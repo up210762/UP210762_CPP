@@ -131,8 +131,10 @@ for i in range(valor):
     Val = Val + (MC[i]*frecI[i])
     ###print(f"Sumatoria para el valor de la varianza: {Val}")###
 
+#Media
 x = Val/longitud
-###print(f"Valor para la varianza: {x}")###
+###print(f"Valor de la media: {x}")###
+
 for i in range(valor):
     VzaAc = VzaAc + ((MC[i]-x)*(MC[i]-x))*frecI[i]
 ###print(f"Sumatoria para la varianza {VzaAc}")###    
@@ -182,7 +184,7 @@ Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
 ###print(f"La moda es: {Mod}")###
 
-#Media
+#Mediana
 controlador = longitud / 2
 for i in range(Categorias):
     if controlador <= FreAc[i] and controlador > FreAc[i-1]:
