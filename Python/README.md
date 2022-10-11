@@ -12,7 +12,7 @@
 <h3>Para el control de las variables, se ha dividido en dos partes: variables estáticas y variables dinámicas</h3>
 <center>
 
-![IMAGEN](VARIABLES.png)
+![IMAGEN](/VARIABLES.png)
 
 </center>
 <br>
@@ -23,15 +23,15 @@
 <center>
 <h2>MEDIA</h2>
 
-![IMAGEN](MEDIA.png)
+![IMAGEN](/MEDIA.png)
 
 <br>
 <h2>MEDIANA</h2>
 
-![IMAGEN](MEDIANA.png)
+![IMAGEN](/MEDIANA.png)
 
 <br>
 <h2>MODA</h2>
 
-![IMAGEN](MODA.png)
+![IMAGEN](/MODA.png)
 </center>
