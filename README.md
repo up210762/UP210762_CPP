@@ -3,12 +3,12 @@ Dónovan Alonso Hernández Carmona
 
 <center>
 
+<h1>Bienvenido a mi repositorio</h1>
+
+<br>
+
 ![Screenshot](719179.png)
 
-<h1>-----------------------------------------------------<h1>
+<br>
 
-![Imagen]()
-
-<h1>-----------------------------------------------------<h1>
-
-![Wallparer](mylivewallpapers.com-Goku-Ultra-Instinct.mp4)
+![Imagen](mylivewallpapers-com-Vegeta.gif)
