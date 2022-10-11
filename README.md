@@ -7,8 +7,4 @@ Dónovan Alonso Hernández Carmona
 
 <br>
 
-![Screenshot](719179.png)
-
-<br>
-
 ![Imagen](/mylivewallpapers-com-Vegeta.gif)
