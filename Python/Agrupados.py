@@ -79,9 +79,6 @@ if limSup[valor] <= xmax:
     limInf.append(Vmax)
     limSup.append(Vmax+Amplitud)
 
-###print(f"Constante sin redondear: {crudCat}\nConstante redondeada: {Categorias}")###
-###print(f"La amplitud sin redondear es: {crudAmp}\nLa amplitud redondeada es: {Amplitud}")###
-
 #Obtener categorías
 valor = len(limInf)
 Val = len(Acomodo)
@@ -90,27 +87,22 @@ for i in range(valor):
     xi = (limSup[i]+limInf[i])/2
     MC.append(xi)
     ranCat.append([limInf[i], limSup[i]])
-###print(f"Los límites inferiores son: {limInf}\nMarcas de clase: {MC}\nRango de categorías: {ranCat}\n")###
 
 #Frecuencia absoluta
 for i in range(valor):
     fi = 0
     Vmin = limInf[i]
     Vmax = limSup[i]
-    ###print(f"Valor máximo de la categoría: {Vmax}\nValor mínimo de la categoría: {Vmin}")###
     for j in range(Val):
         if Acomodo[j] < Vmax and Acomodo[j] >= Vmin:
             fi = fi + 1
     frecI.append(fi)
-###print(f"Las frecuencias absolutas son: {frecI}")###
 
 #Frecuencia absoluta acumulada
 valor = len(frecI)
 for i in range(valor):
     frecIa = frecIa + frecI[i]
     FreAc.append(frecIa)
-###print(f"Las frecuencias absolutas acumuladas son: {FreAc}")###
-
 
 #Frecuencia relativa
 for i in range(valor):
@@ -118,7 +110,6 @@ for i in range(valor):
     frecRe.append(Val)
 #Frecuemcia relativa acumulada
     frecReA = frecReA + Val
-###print(f"Frecuencia relativa: {frecRe}\nFrecuencia relativa acumulada: {frecReA}")###
 
 #Porcentaje
 for i in range(valor):
@@ -168,14 +159,18 @@ controlador = 0
 for i in range(Categorias):
     if frecI[i] > controlador:
         controlador = frecI[i]
+for i in range(Categorias):
+    if controlador != frecI[0]:
         vmin = frecI[i-1]
+        vmax = frecI[i+1]
+    elif controlador == frecI[0]:
+        vmin = frecI[i]
         vmax = frecI[i+1]
 xmax = controlador
 Vmin = vmin
 Vmax = vmax
 Val = ((xmax-Vmin)/((xmax-Vmin)+(xmax-Vmax)))
 Mod = linMax + (Amplitud*Val)
-###print(f"La moda es: {Mod}")###
 
 #Mediana
 controlador = longitud / 2
@@ -190,7 +185,6 @@ Med = linMax + (Amplitud*Val)
 #Coeficiente de variación
 cV = 0
 cV = round((Sd/(x))*100,2)
-###print(f"El coeficiete de variación es: {cV}%")###
 
 #Límites inferiores para los cuartiles
 controlador = 0
@@ -215,7 +209,6 @@ print(f"Frecuecia absoluta: {frecI}\n")
 print(f"Frecuencia absoluta acumulada: {frecIa}\n")
 print(f"Frecuencia relativa: {frecRe}\n")
 print(f"Frecuencia relativa acumulada: {frecReA}\n")
-print(f"Categoría: {ranCat}\n")
 print(f"Valores: {Acomodo}\n")
 print(f"Varianza: {Vza}\n")
 print(f"Desviación estándar: {Sd}\n")
@@ -226,7 +219,10 @@ print(f"Coeficiente de variación: {cV}%\n")
 print("Para los cuartiles introduce los siguientes valores en el programa Cuartiles")
 print("Cantidad de cuartiles: 3")
 print(f"Cantidad de valores: {longitud}")
-print(f"El total de categorías es: {Categorias}")
+if crudCat < Categorias:
+    print(f"Categorías: {Categorias}\n")
+else: 
+    print(f"Categorías: {Categorias + 1}")
 print(f"Las frecuencias absolutas son: {frecI}")
 print(f"Los límites inferiores a introducir son {cuartil}")
 print(f"La amplitud es: {Amplitud}")
