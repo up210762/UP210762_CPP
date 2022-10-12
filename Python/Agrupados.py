@@ -1,6 +1,5 @@
 import numpy as np
 import math as ma
-import fnmatch
 
 # Variables estáticas
 longitud = int(input("¿Cuántos números introduces? "))

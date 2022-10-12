@@ -36,17 +36,16 @@ for i in range(count):
     const.append(k)
 Amplitud = int(input("Introduce la amplitud: "))
 for i in range(count):
-    controlador = const[i]
     for j in range(Categorias):
-        if controlador < FreAc[j] and controlador > FreAc[j-1]:
-            if controlador > frecI[0]:
+        if const[i] > FreAc[j+1] and const[i] < FreAc[j]:
                 Val = FreAc[j-1]
                 contador = frecI[j]
-            elif controlador == frecI[0]:
-                Val = 0
+        if const[i] > FreAc[j+1] and const[i] > FreAc[j]:
+                if const[i] == frecI[0]:
+                    Val = 0
+                    contador = frecI[j]
     fi.append(contador)
     Fi.append(Val)
-
 
 for i in range(count):
     contador = round((limInf[i]+(Amplitud*(const[i]-Fi[i])/fi[i])), 3)
