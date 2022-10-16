@@ -78,6 +78,21 @@
 <br>
 </center>
 <br>
+
+<center><h1>Cuartiles.py<h1></center>
+<h3>Para este programa se generó un código con muchas condicionales, pues son requeridas para obtener el resultado correcto de los cuartiles siguiendo la siguiente fórmula:</h3>
+
+<center>
+
+![IMAGEN](/IMAGENES/CUARTILES.png)
+
+![IMAGEN](/IMAGENES/CODIGO%20CUARTILES.png)
+
+<br>
+<h3><div align = "left">El "controlador" del cuartil proviene a partir de la operación k*N/4, pues el resultado que genere se tendrá que buscar que entre en las frecuencias absolutas acumuladas. Derivado de ello es que cambiarán los valores.</div></h3>
+
+</center>
+<br>
 <h4><div align = "left">Para probar el programa intoduzca los siguientes 25 números: 40, 37, 60, 10, 30, 45, 55, 27, 40, 70, 30, 50, 35, 40, 60, 80, 50, 60, 65, 50, 55, 40, 35, 48, 50</div></h4>
 <table class="default">
     <tr>
@@ -177,17 +192,3 @@
         <td></td>
     <tr>
 </table>
-
-<center><h1>Cuartiles.py<h1></center>
-<h3>Para este programa se generó un código con muchas condicionales, pues son requeridas para obtener el resultado correcto de los cuartiles siguiendo la siguiente fórmula:</h3>
-
-<center>
-
-![IMAGEN](/IMAGENES/CUARTILES.png)
-
-![IMAGEN](/IMAGENES/CODIGO%20CUARTILES.png)
-
-<br>
-<h3><div align = "left">El "controlador" del cuartil proviene a partir de la operación k*N/4, pues el resultado que genere se tendrá que buscar que entre en las frecuencias absolutas acumuladas. Derivado de ello es que cambiarán los valores.</div></h3>
-
-</center>
