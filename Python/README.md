@@ -192,3 +192,5 @@
         <td></td>
     <tr>
 </table>
+
+<h3><FONT color="FF00">Nota: los resultados expuestos en las tablas son cálculos hechos a mano. La diferencia de decimales puede ser consecuencia del redondeo al momento de hacer los cálculos en papel.</FONT></h3>
