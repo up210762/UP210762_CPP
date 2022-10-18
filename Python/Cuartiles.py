@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
 #Cuartiles (Se toma a partir del intervalo que contiene las frecuencias absolutas)
 k = 0
 j = 0
@@ -37,24 +40,24 @@ for i in range(count):
 Amplitud = int(input("Introduce la amplitud: "))
 for i in range(count):
     for j in range(Categorias):
-        while FreAc[j] < const[i]:
-            controlador = FreAc[j]
-            break
-        print(controlador)
-"""
-    for j in range(Categorias):
-        if controlador != FreAc[0]:
-            Val = FreAc[j-1]
+        if const[i] <= FreAc[0]:
+            controlador = 0
+            contador = frecI[0]
+        elif const[i] > FreAc[0] and const[i] > FreAc[j-1]:
+            controlador = FreAc[j-1]
             contador = frecI[j]
-        else:
-            Val = 0
-            contador = frecI[j]
+    Fi.append(controlador)
     fi.append(contador)
-    Fi.append(Val)
 
 for i in range(count):
-    contador = round((limInf[i]+(Amplitud*(const[i]-Fi[i])/fi[i])), 3)
+    contador = round(limInf[i]+(Amplitud*((const[i]-Fi[i])/fi[i])), 3)
     cuartil.append(contador)
 print(cuartil)
-"""
-cout()
+
+#Gráficas
+np.random.seed(10)
+data = np.random.normal(cuartil)
+
+fig = plt.figure(figsize=(10, 7))
+plt.boxplot(data)
+plt.show()

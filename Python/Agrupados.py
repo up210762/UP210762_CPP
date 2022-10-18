@@ -1,5 +1,6 @@
 import numpy as np
 import math as ma
+import matplotlib.pyplot as plt
 
 # Variables estáticas
 longitud = int(input("¿Cuántos números introduces? "))
@@ -159,10 +160,10 @@ for i in range(Categorias):
     if frecI[i] > controlador:
         controlador = frecI[i]
 for i in range(Categorias):
-    if controlador != frecI[0]:
+    if controlador != frecI[0] and controlador == frecI[i]:
         vmin = frecI[i-1]
         vmax = frecI[i+1]
-    elif controlador == frecI[0]:
+    elif controlador == frecI[0] and controlador == frecI[i]:
         vmin = frecI[i]
         vmax = frecI[i+1]
 xmax = controlador
