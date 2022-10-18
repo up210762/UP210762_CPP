@@ -37,13 +37,18 @@ for i in range(count):
 Amplitud = int(input("Introduce la amplitud: "))
 for i in range(count):
     for j in range(Categorias):
-        if const[i] > FreAc[j+1] and const[i] < FreAc[j]:
-                Val = FreAc[j-1]
-                contador = frecI[j]
-        if const[i] > FreAc[j+1] and const[i] > FreAc[j]:
-                if const[i] == frecI[0]:
-                    Val = 0
-                    contador = frecI[j]
+        while FreAc[j] < const[i]:
+            controlador = FreAc[j]
+            break
+        print(controlador)
+"""
+    for j in range(Categorias):
+        if controlador != FreAc[0]:
+            Val = FreAc[j-1]
+            contador = frecI[j]
+        else:
+            Val = 0
+            contador = frecI[j]
     fi.append(contador)
     Fi.append(Val)
 
@@ -51,4 +56,5 @@ for i in range(count):
     contador = round((limInf[i]+(Amplitud*(const[i]-Fi[i])/fi[i])), 3)
     cuartil.append(contador)
 print(cuartil)
+"""
 cout()
