@@ -251,9 +251,10 @@ data = np.random.normal(Cuartil)
 fig = plt.figure(figsize=(10, 7))
 plt.boxplot(data)
 plt.show()
-
+'''
 #2) Gráfica de puntos
 Val = len(limInf)
+controlador = 
 Valx = range(min(Acomodo), max(Acomodo) + Categorias)
 Valy = Acomodo
 plt.plot(Valx,Valy, "o", color='b')
@@ -261,7 +262,7 @@ plt.xlabel("X-axis")
 plt.xlabel("Y-axis")
 plt.title("Gráfica de puntos")
 plt.show()
-
+'''
 #3) Gráfica lineal
 plt.plot(Valx,Valy, color='b')
 plt.xlabel("X-axis")
