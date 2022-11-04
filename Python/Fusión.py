@@ -4,6 +4,41 @@ import math as ma
 from matplotlib import pylab, mlab, pyplot as plt
 from collections import Counter
 
+######## Funciones ########
+#1) Diagrama de caja y bigote
+def Boxplot(Cuartil):
+    np.random.seed(10)
+    data = np.random.normal(Cuartil)
+    fig = plt.figure(figsize=(10, 7))
+    plt.boxplot(data)
+    plt.show()
+
+#2) Gráfica de puntos
+def GrafPoint(Valx, Valy):
+    plt.plot(Valx,Valy, "o", color='b')
+    plt.xlabel("X-axis")
+    plt.xlabel("Y-axis")
+    plt.title("Gráfica de puntos")
+    plt.show()
+
+#3) Gráfica lineal
+def LinealGraf(Valx, Valy):
+    plt.plot(Valx,Valy, color='b')
+    plt.xlabel("X-axis")
+    plt.xlabel("Y-axis")
+    plt.title("Gráfica lineal")
+    plt.show()
+
+#4) Histograma
+def Hist(Acomodo):
+    intervalos = range(min(Acomodo), max(Acomodo) + 2)
+    plt.hist(x=Acomodo, bins=intervalos, color='#F2AB6D', rwidth=0.85)
+    plt.title('Histograma')
+    plt.xlabel('label-X')
+    plt.ylabel('label-Y')
+    plt.xticks(intervalos)
+    plt.show()
+
 # Variables estáticas
 longitud = int(input("¿Cuántos números introduces? "))
 frecRe = []
@@ -243,40 +278,9 @@ print(f"Moda: {Mod}\n")
 print(f"Coeficiente de variación: {cV}%\n")
 print(f"Los valores de los cuartiles son: {Cuartil}")
 
-#Gráficas
-#1) Diagrama de caja y bigote
-np.random.seed(10)
-data = np.random.normal(Cuartil)
+##### Gráficas #####
 
-fig = plt.figure(figsize=(10, 7))
-plt.boxplot(data)
-plt.show()
-'''
-#2) Gráfica de puntos
-Val = len(limInf)
-controlador = 
-Valx = range(min(Acomodo), max(Acomodo) + Categorias)
-Valy = Acomodo
-plt.plot(Valx,Valy, "o", color='b')
-plt.xlabel("X-axis")
-plt.xlabel("Y-axis")
-plt.title("Gráfica de puntos")
-plt.show()
-'''
-#3) Gráfica lineal
-plt.plot(Valx,Valy, color='b')
-plt.xlabel("X-axis")
-plt.xlabel("Y-axis")
-plt.title("Gráfica lineal")
-plt.show()
-
-#4) Histograma
-intervalos = range(min(Acomodo), max(Acomodo) + 2)
-
-plt.hist(x=Acomodo, bins=intervalos, color='#F2AB6D', rwidth=0.85)
-plt.title('Histograma')
-plt.xlabel('label-X')
-plt.ylabel('label-Y')
-plt.xticks(intervalos)
-
-plt.show()
+Boxplot(Cuartil)
+#GrafPoint()
+#LinealGraf()
+Hist(Acomodo)
