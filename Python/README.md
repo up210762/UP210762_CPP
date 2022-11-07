@@ -1,6 +1,8 @@
 <center>
-<h1>Agrupados.py<h1>
+<h1>Fusión.py<h1>
 </center>
+
+<h3>Es el resultado funcional de la fusión del programa "Agrupados.py" y "Cuartiles.py", donde se busca unificar los resultados y poder obtener los gráficos y los datos completos, sin necesidad de hacer reescritura manual doble.</h3>
 
 <h1>Variables</h1>
 <br>
@@ -78,9 +80,9 @@
 <br>
 </center>
 <br>
-
-<center><h1>Cuartiles.py<h1></center>
-<h3>Para este programa se generó un código con muchas condicionales, pues son requeridas para obtener el resultado correcto de los cuartiles siguiendo la siguiente fórmula:</h3>
+<center><h2>Cuartiles</h2></center>
+<br>
+<h3>Para este tramo de código, se separó en dos programas diferentes, además se hizo uso de muchas condicionales para lograr que el algoritmo se acercara al resultado más correcto. Los cuartiles siguiendo la siguiente fórmula:</h3>
 
 <center>
 

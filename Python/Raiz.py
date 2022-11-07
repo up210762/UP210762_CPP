@@ -21,7 +21,7 @@ else:
     i = k
 
 print(f"{i}")
-'''
+
 count = [1, 2, 3]
 contenedor = []
 for i in range(count):
@@ -31,3 +31,8 @@ for i in range(count):
 controlador = 0
 
 while controlador < 
+'''
+from statistics import variance
+datos_crudos = input('Dime los numeros: ')
+lista_datos = [float(d) for d in datos_crudos.split()]
+print(variance(lista_datos))
