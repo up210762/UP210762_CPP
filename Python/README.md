@@ -58,6 +58,7 @@
 <br>
 <h1><div align = "left">Medidas de dispersión</div></h1>
 <br>
+<center>
 <h2>Varianza</h2>
 
 ![IMAGEN](/IMAGENES/VARIANZA.png)
@@ -66,6 +67,8 @@
 
 ![IMAGEN](/IMAGENES/CODIGO%20VARIANZA.png)
 <br>
+</center>
+
 <h3><div align = "left">Primero se realiza una sumatoria de la multiplicación de las marcas de clase por las frecuencias absolutas y se dividen entre la longitud para sacar la media aritmética. Después se hace la sumatoria del la multiplicación de las frecuencias absolutas por el cuadrado de las diferencias de las marcas de clase menos la media aritmética. Por último, se dividirá el resultado de lo anterior entre el total de números introducidos menos uno.</div></h3>
 <br>
 <center>
