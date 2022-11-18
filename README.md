@@ -9,6 +9,6 @@ Dónovan Alonso Hernández Carmona
 
 ![Screenshot](719179.png)
 
-![IMAGEN](https://github.com/up210762/UP210762_CPP/blob/main/IMAGENES/mylivewallpapers-com-Vegeta.gif)
+![IMAGEN](/IMAGENES/mylivewallpapers-com-Vegeta.gif)
 
 <br>
