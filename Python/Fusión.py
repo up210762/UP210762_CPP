@@ -39,10 +39,21 @@ def Hist(Acomodo):
     plt.xticks(intervalos)
     plt.show()
 
+def sumatoria(r,x,y):
+    r += x
+    if r <= y:
+        sumatoria(r,x,y)
+    else:
+        return r
+
+
 # Variables estáticas
-longitud = int(input("¿Cuántos números introduces? "))
+
+#longitud = int(input("¿Cuántos números introduces? "))
 frecRe = []
-Datos = []
+Datos = [40, 37, 60, 10, 30, 45, 55, 27, \
+    40, 70, 30, 50, 35, 40, 60, 80, 50, 60, \
+    65, 50, 55, 40, 35, 48, 50]
 limInf = []
 limSup = []
 ranCat = []
@@ -81,12 +92,21 @@ controlador = 0
 xmax = 0
 xmin = 0
 
+"""
 # Escritura de los valores
 print("Introduce los valores: ")
 for i in range(longitud):
     Vmin = 0
     números = int(input("> "))
     Datos.append(números)
+"""
+longitud = len(Datos)
+
+print("Introduce los valores: ")
+for i in range(longitud):
+    Vmin = 0
+    números = Datos[i]
+    """int(input("> "))"""
 
 #Selección del número máximo
     if números > xmax:
@@ -162,7 +182,9 @@ print(f"Porcentajes: {Val}%")
 
 #Varianza
 for i in range(valor):
-    Val = Val + (MC[i]*frecI[i])
+    x = (MC[i]*frecI[i])
+    Val = sumatoria(Val, x, valor)
+
 
 #Media
 x = Val/longitud

@@ -31,8 +31,28 @@ for i in range(count):
 controlador = 0
 
 while controlador < 
-'''
+
 from statistics import variance
 datos_crudos = input('Dime los numeros: ')
 lista_datos = [float(d) for d in datos_crudos.split()]
 print(variance(lista_datos))
+
+def cuenta_atras(num):
+    num -= 1
+    if num > 0:
+        print(num)
+        cuenta_atras(num)
+    else:
+        print("Boooooooom!")
+    print("Fin de la función", num)
+
+cuenta_atras(5)
+'''
+def contador(num, x):
+    num += 1
+    if num <= x:
+        contador(num, x)
+    else:
+        print(num)
+
+contador(4, 4)
