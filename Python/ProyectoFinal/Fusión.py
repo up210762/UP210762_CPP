@@ -98,7 +98,6 @@ print("Introduce los valores: ")
 for i in range(longitud):
     Vmin = 0
     números = int(input("> "))
-    Datos.append(números)
 """
 longitud = len(Datos)
 
@@ -106,15 +105,15 @@ print("Introduce los valores: ")
 for i in range(longitud):
     Vmin = 0
     números = Datos[i]
-    """int(input("> "))"""
+    """numeros = int(input("> "))
+    Datos.append(números)"""
 
 #Selección del número máximo
     if números > xmax:
         xmax = números
 
 #Acomodo de datos
-for i in Datos:
-    Acomodo = sorted(Datos)
+Acomodo = sorted(Datos)
 
 #Selección del número menor
 xmin = Acomodo[0]

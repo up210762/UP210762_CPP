@@ -1,0 +1,106 @@
+</center>
+<br>
+<h4><div align = "left">Para probar el programa intoduzca los siguientes 25 números: 40, 37, 60, 10, 30, 45, 55, 27, 40, 70, 30, 50, 35, 40, 60, 80, 50, 60, 65, 50, 55, 40, 35, 48, 50</div></h4>
+
+<center>
+<table class="default">
+    <tr>
+        <td>Categorías</td>
+        <td>Xi</td>
+        <td>fi</td>
+        <td>Fi</td>
+        <td>fr</td>
+        <td>Fr</td>
+        <td>hi</td>
+    <tr>
+    <tr>
+        <td>10-22</td>
+        <td>16</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0.04</td>
+        <td>0.04</td>
+        <td>4%</td>
+    <tr>
+    <tr>
+        <td>22-34</td>
+        <td>28</td>
+        <td>3</td>
+        <td>4</td>
+        <td>0.12</td>
+        <td>0.16</td>
+        <td>12%</td>
+    <tr>
+    <tr>
+        <td>34-46</td>
+        <td>40</td>
+        <td>8</td>
+        <td>12</td>
+        <td>0.32</td>
+        <td>0.48</td>
+        <td>32%</td>
+    <tr>
+    <tr>
+        <td>46-58</td>
+        <td>52</td>
+        <td>7</td>
+        <td>19</td>
+        <td>0.28</td>
+        <td>0.76</td>
+        <td>28%</td>
+    <tr>
+    <tr>
+        <td>58-70</td>
+        <td>64</td>
+        <td>4</td>
+        <td>23</td>
+        <td>0.16</td>
+        <td>0.92</td>
+        <td>16%</td>
+    <tr>
+    <tr>
+        <td>70-82</td>
+        <td>76</td>
+        <td>2</td>
+        <td>25</td>
+        <td>0.08</td>
+        <td>1</td>
+        <td>8%</td>
+    <tr>
+</table>
+<br>
+<table class="default">
+    <tr>
+        <td>MTC</td>
+        <td>MD</td>
+        <td>Cuartiles</td>
+        <td>Otros</td>
+    <tr>
+    <tr>
+        <td>X=47.68</td>
+        <td>R=70</td>
+        <td>Q1=37.37</td>
+        <td>CA=0.16</td>
+    <tr>
+    <tr>
+        <td>Me=46.85</td>
+        <td>s^2=226.5583</td>
+        <td>Q2=46.85</td>
+        <td>k=5.64</td>
+    <tr>
+    <tr>
+        <td>Mo=44</td>
+        <td>s=15.0518</td>
+        <td>Q3=57.57</td>
+        <td>A=12</td>
+    <tr>
+    <tr>
+        <td></td>
+        <td>Cv=31.56%</td>
+        <td></td>
+        <td></td>
+    <tr>
+</table>
+</center>
+
+<h3><FONT color="FF00">Nota: los resultados expuestos en las tablas son cálculos hechos a mano. La diferencia de decimales puede ser consecuencia del redondeo al momento de hacer los cálculos en papel.</FONT></h3>
