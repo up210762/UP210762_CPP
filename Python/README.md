@@ -1,6 +1,3 @@
-<center>
-<h1>Fusión.py<h1>
-</center>
-
-<h3>Es el resultado funcional de la fusión del programa "Agrupados.py" y "Cuartiles.py", donde se busca unificar los resultados y poder obtener los gráficos y los datos completos, sin necesidad de hacer reescritura manual doble.</h3>
+<h1>Contenido de las carpetas: </h1>
 <br>
+<h3>La carpeta con el programa de probabilidad y estadística es "ProyectoFinal", mientras que la carpeta de extras contiene otros programas que son meramente experimentales o ejercicios para reforzar mis conocimietos en Python</h3>
