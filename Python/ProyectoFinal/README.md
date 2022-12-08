@@ -36,3 +36,4 @@
 <button><a href="../../IMAGENES/">Ejecución del programa</a></button>
 <br>
 <br>
+<h3>El archivo "libAgrup.py" contiene algunas funciones inspiradas en el archivo Fusión.py</h3>
