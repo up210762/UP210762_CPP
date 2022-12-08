@@ -10,3 +10,5 @@
 
 <br>
 <h3><div align = "left">El "controlador" del cuartil proviene a partir de la operación k*N/4, pues el resultado que genere se tendrá que buscar que entre en las frecuencias absolutas acumuladas. Derivado de ello es que cambiarán los valores.</div></h3>
+<br>
+<button><a href='./README.md'>Index</a></button>

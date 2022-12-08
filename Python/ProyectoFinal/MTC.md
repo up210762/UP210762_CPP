@@ -40,3 +40,4 @@
 <br>
 <h3><div align = "left">Esta fórmula es un poco más dificil que las anteriores, pues se debe obtener el límite inferior, número anterior a la frecuencia absoluta más alta y también el número que le sigue. Para resolver este problema se diseñó un algoritmo capaz de hacer la búsqueda de manera automática.</div></h3>
 <br>
+<button><a href='./README.md'>Index</a></button>
