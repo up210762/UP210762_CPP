@@ -29,7 +29,7 @@
 <br>
 <br>
 <h4>Diagrma de flujo:</h4>
-<button><a href="../../IMAGENES/">Diagrama de flujo</a></button>
+<button><a href="./Diagrama.md">Diagrama de flujo</a></button>
 <br>
 <br>
 <h4>Impresión de resultados:</h4>
