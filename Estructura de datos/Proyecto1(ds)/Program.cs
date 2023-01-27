@@ -13,17 +13,19 @@ namespace PincheProgramaCuleroooooo
             {
                 for (int j=0; j<7; j++)
                 {
-                    matriz[i, j] = aleatorio.Next(1,28);
+                    int n = aleatorio.Next(1,28);
+                    matriz[i, j] = n;
                 }
             }
-            
-        }
-        public void verificar(int[,] matriz)
-        {
-            for (int i=0; i<matriz[], i++)
+            for (int i=0; i < 4; i++)
             {
-                
+                for (int j=0; j < 7; j++)
+                {
+                    Console.Write(matriz[i, j] + "\t");
+                }
+            Console.WriteLine();
             }
+            
         }
     }
 }
