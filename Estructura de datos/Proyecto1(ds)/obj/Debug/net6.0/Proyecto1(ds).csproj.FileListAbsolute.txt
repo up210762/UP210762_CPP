@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/Proyecto1(ds)
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/Proyecto1(ds).deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/Proyecto1(ds).runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/Proyecto1(ds).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/ref/Proyecto1(ds).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/bin/Debug/net6.0/Proyecto1(ds).pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/ref/Proyecto1(ds).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto1(ds)/obj/Debug/net6.0/Proyecto1(ds).genruntimeconfig.cache

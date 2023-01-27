@@ -1,0 +1,40 @@
+#CREAR UNA NUEVA BASE DE DATOS
+
+//COMANDOS
+CREATE DATABASE [NAME] + F5
+
+//VISUAL
+Click derecho en base de datos y crear nueva base de datos + OK
+
+#
+· char (tamaño) - cadena de tamaño fijo que puede contener letras, números, caractéres especiales.
+· varchar (tamaño) - cadena de tamaño variable que puede contener letras, números, caractéres especiales.
+· bit - Cero (o valores que son igual a 0) es falso, no-cero es verdadero
+· int (tamaño opcional) - un número de hasta 10 caracteres en longitud, acepta números negativos y positivos
+· bigint (tamaño opcional) - un número de hasta 19 caracteres en longitud, acepta números negativos y posativos
+
+
+################################################################################################################################################################
+
+--SELECT ALL INFORMATION
+SELECT * FROM [dbo],[JugadorSinRelaciones]
+
+--SELECT SPECIFIC INFORMATION
+SELECT Name As Nombre, Equipo, Estatura
+FROM [dbo],[JugadorSinRelaciones]
+
+--SELECT SPECIFIC INFORMATION WITH ALIAS
+
+
+-- SELECT COUNT 
+SELECT COUNT(*) as NumeroJugadores FROM [dbo],[JugadorSinRelaciones]
+
+
+-- SELECT + CONDITIONALS
+SELECT COUNT(*) as CamisetasRepetidas FROM [dbo],[JufadorSinRelaciones]
+WHERE NumeroCamiseta = '15'
+
+################################################################################################################################################################
+--UPDATE
+
+SET Description = 'Necesito practicar'

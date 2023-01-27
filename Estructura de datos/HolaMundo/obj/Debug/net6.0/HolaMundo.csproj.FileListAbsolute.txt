@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/HolaMundo
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/HolaMundo.deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/HolaMundo.runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/HolaMundo.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/ref/HolaMundo.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/bin/Debug/net6.0/HolaMundo.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/ref/HolaMundo.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/HolaMundo/obj/Debug/net6.0/HolaMundo.genruntimeconfig.cache

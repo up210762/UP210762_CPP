@@ -1,0 +1,5 @@
+/home/d2022f/Documents/UP210762_CPP/obj/Debug/net6.0/UP210762_CPP.csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/obj/Debug/net6.0/UP210762_CPP.GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/obj/Debug/net6.0/UP210762_CPP.AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/obj/Debug/net6.0/UP210762_CPP.AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/obj/Debug/net6.0/UP210762_CPP.csproj.CoreCompileInputs.cache

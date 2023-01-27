@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/Ciclos
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/Ciclos.deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/Ciclos.runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/Ciclos.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/ref/Ciclos.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/bin/Debug/net6.0/Ciclos.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/ref/Ciclos.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Ciclos/obj/Debug/net6.0/Ciclos.genruntimeconfig.cache

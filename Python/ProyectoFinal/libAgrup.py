@@ -145,7 +145,7 @@ def Desviacion_Estandar(varianza):
 
 ##################################################################################################################################################################
 #Media de MTC
-def Media_MTC(absoluta, limInf, abs_Acum):
+def Media_MTC(absoluta, limInf, abs_Acum, amplitud, longitud, categorias):
     linMax = 0
     controlador = 0
     for i in range(len(absoluta)):
@@ -176,7 +176,7 @@ def Media_MTC(absoluta, limInf, abs_Acum):
 
 ##################################################################################################################################################################
 #Moda
-def Moda_MTC(absoluta, categorias, limInf, abs_Acum):
+def Moda_MTC(absoluta, categorias, amplitud, limInf, abs_Acum):
     linMax = 0
     contador = categorias
     controlador = 0
@@ -214,8 +214,9 @@ def Moda_MTC(absoluta, categorias, limInf, abs_Acum):
 
 ##################################################################################################################################################################
 #Mediana
-def Mediana_MTC(absoluta, categorias, limInf, abs_Acum):
+def Mediana_MTC(absoluta, categorias, limInf, abs_Acum, longitud, amplitud):
     linMax = 0
+    controlador = 0
     for i in range(categorias):
         if absoluta[i] > controlador:
             controlador = absoluta[i]
@@ -231,17 +232,17 @@ def Mediana_MTC(absoluta, categorias, limInf, abs_Acum):
                 Vmax = absoluta[i+1]
                 xmax = absoluta[i]
     controlador = longitud / 2
-    for i in range(Categorias):
+    for i in range(categorias):
         if controlador <= abs_Acum[i] and controlador > abs_Acum[i-1]:
             vmin = abs_Acum[i-1]
             vmax = absoluta[i]
             linMax = limInf[i]
     Val = round(((controlador-vmin)/vmax), 3)
-    Med = linMax + (Amplitud*Val)
+    Med = linMax + (amplitud*Val)
     return Med
 ##################################################################################################################################################################
 #Coefficiente de variación
-def Coefficiente_variacion(Standar_desv, Media_arit):
+def Coefficiente_variacion(Standar_desv, Media_arit, absoluta, categorias):
     for i in range(categorias):
         x = Media_arit[i] * absoluta[i]
     cV = 0
@@ -286,6 +287,7 @@ def Cuartiles_Datos_Agrupados(rel_Acum, limInf, categorias, amplitud, longitud):
         Cuartil.append(contador)
     return Cuartil
 ##################################################################################################################################################################
+"""
 os.system('clear')
 Datos = [40, 37, 60, 10, 30, 45, 55, 27, 40, 70, 30, 50, 35, 40, 60, 80, 50, 60, 65, 50, 55, 40, 35, 48, 50]
 LimInf, LimSup = limits(Datos, 25)
@@ -316,3 +318,4 @@ cv = Coefficiente_variacion(sd,MC)
 print(cv)
 cuartil = Cuartiles_Datos_Agrupados(rel_acumulada, LimInf, categorias, amplitud, longitud)
 print(cuartil)
+"""
