@@ -152,7 +152,6 @@ namespace copia
             {
                 int contador = 0, a = 0, b = 0;
                 bool Valido = false;
-                ImprimirMatrizInt(Matriz);
                 ImprimirMatrizStr(Matriz2);
                 (a, b) = RecoleccionDatos(Matriz2);
                 (Valido, contador) = validar(contador, Matriz[a, b]);
@@ -177,13 +176,18 @@ namespace copia
                 Matriz2 = Juego(Matriz, Matriz2, a, b);
                 if (Valido == true)
                 {
+                    Console.Clear();
                     Console.WriteLine("Números correctos...");
                     count += 1;
+                    Console.WriteLine("Cantidad de aciertos: " + count);
                 }
                 else
                 {
+                    Console.Clear();
                     Console.WriteLine("Números incorrectos...");
+                    count = 0;
                     Matriz2 = LlenadoCortina();
+                    Console.WriteLine("Cantidad de aciertos: " + count);
                 }
 
                 Thread.Sleep(4000);
