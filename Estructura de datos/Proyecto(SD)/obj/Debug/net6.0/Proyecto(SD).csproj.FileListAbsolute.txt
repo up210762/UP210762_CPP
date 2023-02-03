@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/Proyecto(SD)
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/Proyecto(SD).deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/Proyecto(SD).runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/Proyecto(SD).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/ref/Proyecto(SD).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/bin/Debug/net6.0/Proyecto(SD).pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/ref/Proyecto(SD).dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Proyecto(SD)/obj/Debug/net6.0/Proyecto(SD).genruntimeconfig.cache

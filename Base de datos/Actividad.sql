@@ -5,3 +5,4 @@
 4. Seleccionar todos los jugadores y en caso de tener la camiseta con el numer 10 actualizar en tiempo real la columna column_b con el texto 'Yo soy el mejor jugador'
 5. Seleccionar todos los jugadores nacidos entre abril y noviembre
 */
+

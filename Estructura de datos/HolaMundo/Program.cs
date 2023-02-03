@@ -123,6 +123,7 @@ namespace Introducir
     }
 }
 */
+/*
 
 namespace Introducir
 {
@@ -140,5 +141,16 @@ namespace Introducir
             }
             Console.WriteLine();
         }
+    }
+}
+*/
+class Program
+{
+    public static void Main(string[] args)
+    {
+        string x = Console.ReadLine();
+        int y = Int32.Parse(x.Substring(0,1));
+        int z = Int32.Parse(x.Substring(x.Length - 1, 1));
+        Console.WriteLine(y + " " + z);
     }
 }

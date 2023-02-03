@@ -10,7 +10,9 @@
 -- DELETE
 /*
 DELETE FROM FirstDataBase.JugadorSinRelacion
+
 */
 /*WHERE Descripcion is null*/
 
+/*BORRAR DATOS DE LA TABLA*/
 TRUNCATE TABLE JugadorSinRelaciones;

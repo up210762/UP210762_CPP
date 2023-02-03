@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ProyectoJuego
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ProyectoJuego.deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ProyectoJuego.runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ProyectoJuego.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ref/ProyectoJuego.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/bin/Debug/net6.0/ProyectoJuego.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ref/ProyectoJuego.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/obj/Debug/net6.0/ProyectoJuego.genruntimeconfig.cache
