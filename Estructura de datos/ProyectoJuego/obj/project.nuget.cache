@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PnTYc/jesJ3SEViCf58uv0LOzFIvzCttT4AnUq3UKFRnK/GtNisOzh2mPaQuGqksOOjyXCyjbcvvjx+WUjqVDA==",
+  "dgSpecHash": "qYbNExm59LlBO5l6mTaaQTBYsv15YOnEFGXzwWXhB/nVjMYGYRqs0nTtYZ2ZBJoSoT5bBczXbGDG4NNi8m6fMQ==",
   "success": true,
   "projectFilePath": "/home/d2022f/Documents/UP210762_CPP/Estructura de datos/ProyectoJuego/ProyectoJuego.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/d2022f/.nuget/packages/microsoft.win32.systemevents/7.0.0/microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "/home/d2022f/.nuget/packages/system.drawing.common/7.0.0/system.drawing.common.7.0.0.nupkg.sha512",
+    "/home/d2022f/.nuget/packages/system.windows.extensions/7.0.0/system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

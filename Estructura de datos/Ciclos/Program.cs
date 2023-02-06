@@ -114,22 +114,20 @@ namespace Adivina
     }
 }
 */
-namespace Tabla
+public class Example
 {
-    class Program
-    {
-        private int[] vector;
-        static void llenado(int vector)
-        {
-            Random x = new Random();
-            int y = x.Next(1,28);
-            return y;
-        }
-        static void Main(string[] args)
-        {
-            vector = new int[];
-            
+	public static void Main()
+	{
+		string str = "q";
 
-        }
-    }
+		bool success = Int32.TryParse(str, out int x);	// or, use `int.TryParse()`
+
+		if (success) {
+			Console.WriteLine(x);
+		}
+		else {
+			Console.WriteLine("Input string is invalid.");
+		}
+        Console.WriteLine(success + " " + x);
+	}
 }
