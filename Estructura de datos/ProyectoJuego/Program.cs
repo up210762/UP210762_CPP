@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Diagnostics;
 
 namespace PincheProgramaCuleroooooo
 {
@@ -21,7 +22,7 @@ namespace PincheProgramaCuleroooooo
             return true;
         }
         // Impresión de una matriz de tipo int
-        static void ImprimirMatrizInt(int vel,int[,] Matriz)
+        static void ImprimirMatrizInt(int vel, int[,] Matriz)
         {
             Console.Write("\t");
             for (int i = 0; i <= 4; i++)
@@ -133,14 +134,14 @@ namespace PincheProgramaCuleroooooo
                     }
                     else if (MensajeError(x.Substring(0, 1)) == true || MensajeError(x.Substring(x.IndexOf(',') + 1)) == true || x.Length > 0 || x.Contains(',') == false)
                     {
-                        while(MensajeError(x.Substring(0, 1)) == true || MensajeError(x.Substring(x.IndexOf(",") + 1)) == true || x.Length != 3 || x.Contains(",") == false)
+                        while (MensajeError(x.Substring(0, 1)) == true || MensajeError(x.Substring(x.IndexOf(",") + 1)) == true || x.Length != 3 || x.Contains(",") == false)
                         {
 
-                            
+
                             if (x.Contains(",") == false)
                             {
                                 Console.Clear();
-                                ImprimirMatrizStr(0,Matriz2);
+                                ImprimirMatrizStr(0, Matriz2);
                                 Console.WriteLine("Error de ingreso...");
                                 Console.WriteLine("Intente otra vez: ");
                                 x = Console.ReadLine();
@@ -155,7 +156,7 @@ namespace PincheProgramaCuleroooooo
                             else if (x.Length != 3)
                             {
                                 Console.Clear();
-                                ImprimirMatrizStr(0,Matriz2);
+                                ImprimirMatrizStr(0, Matriz2);
                                 Console.WriteLine("Longitud incorrecta, por favor escriba otra vez la coordenada: ");
                                 x = Console.ReadLine();
                                 if (x == "")
@@ -169,7 +170,7 @@ namespace PincheProgramaCuleroooooo
                             if ((MensajeError(x.Substring(0, 1)) == true || MensajeError(x.Substring(x.IndexOf(",") + 1)) == true) && x != "")
                             {
                                 Console.Clear();
-                                ImprimirMatrizStr(0,Matriz2);
+                                ImprimirMatrizStr(0, Matriz2);
                                 Console.WriteLine("Valores no válidos...");
                                 Console.WriteLine("Intente otra vez: ");
                                 x = Console.ReadLine();
@@ -188,14 +189,37 @@ namespace PincheProgramaCuleroooooo
                 if (x == "")
                 {
                     Console.Clear();
-                    ImprimirMatrizStr(0,Matriz2);
+                    ImprimirMatrizStr(0, Matriz2);
                     Console.WriteLine("¡No has ingresado valores!");
                     Console.WriteLine("Intenta otra vez...");
                     x = Console.ReadLine();
                     continue;
                 }
             }
-            return(a,b);
+            return (a, b);
+        }
+        static void Cancion()
+        {
+            try
+            {
+                using (Process myProcess = new Process())
+                {
+                    myProcess.StartInfo.UseShellExecute = false;
+                    // You can start any process, HelloWorld is a do-nothing example.
+                    myProcess.StartInfo.FileName = "./bash.sh";
+                    myProcess.StartInfo.CreateNoWindow = true;
+                    myProcess.Start();
+                    
+                    // This code assumes the process you are starting will terminate itself.
+                    // Given that it is started without a window so you cannot terminate it
+                    // on the desktop, it must terminate itself or you can do it programmatically
+                    // from this application using the Kill method.
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
         static int[,] LlenadoPrincipal()
         {
@@ -214,6 +238,23 @@ namespace PincheProgramaCuleroooooo
                 }
             }
             return Matriz;
+        }
+        public static string [,] BorradoModoFacil(int[] vector, int [,] Matriz, string[,] Matriz2)
+        {
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    for (int k = 0; k < 7; k++)
+                    {
+                        if (Matriz[j,k] == vector[i])
+                        {
+                            Matriz2[j,k] = "*";
+                        }
+                    }
+                }
+            }
+            return Matriz2;
         }
         public static (bool, int) validar(int contador, int numero)
         {
@@ -245,11 +286,11 @@ namespace PincheProgramaCuleroooooo
         }
         static bool MensajeError(string dato)
         {
-            if(dato == "1" || dato == "2" || dato == "3" || dato == "4" || dato == "5" || dato == "6" || dato == "0")
+            if (dato == "1" || dato == "2" || dato == "3" || dato == "4" || dato == "5" || dato == "6" || dato == "0")
             {
                 return false;
             }
-            else if(dato == "")
+            else if (dato == "")
             {
                 return true;
             }
@@ -260,9 +301,73 @@ namespace PincheProgramaCuleroooooo
         }
         static void ModoFacil()
         {
-            Console.WriteLine("Modo no disponible por el momento");
-        }
+            // Llenado de la matriz principal con numeros random, sin repetir
+            Random num = new Random();
+            int[,] Matriz = new int[4, 7];
+            int count = 0;
+            string[,] Matriz2 = new string[4, 7];
+            int [] vector = new int[2];
+            Matriz2 = LlenadoCortina(); // matriz con asteriscos
+            Matriz = LlenadoPrincipal();
+            // Recolección de datos e impresión de matriz
+            ImprimirMatrizStr(100, Matriz2);
+            Console.Clear();
+            while (count < 14)
+            {
+                int contador = 0, a = 0, b = 0;
+                bool Valido = false;
+                ImprimirMatrizStr(0, Matriz2);
+                (a, b) = RecoleccionDatos(Matriz2);
+                (Valido, contador) = validar(contador, Matriz[a, b]);
+                while (NoRepetido(Convert.ToString(Matriz[a, b]), Matriz2) == true)
+                {
 
+                    Console.Clear();
+                    ImprimirMatrizStr(0, Matriz2);
+                    Console.WriteLine("El número está repetido...");
+                    (a, b) = RecoleccionDatos(Matriz2);
+                    (Valido, contador) = validar(contador, Matriz[a, b]);
+                }
+                Matriz2 = Juego(Matriz, Matriz2, a, b);
+                vector[0] = Matriz[a,b];
+                Console.Clear();
+                ImprimirMatrizStr(0, Matriz2);
+                (a, b) = RecoleccionDatos(Matriz2);
+                (Valido, contador) = validar(contador, Matriz[a, b]);
+                while (NoRepetido(Convert.ToString(Matriz[a, b]), Matriz2) == true)
+                {
+
+                    Console.Clear();
+                    ImprimirMatrizStr(0, Matriz2);
+                    Console.WriteLine("El número está repetido...");
+                    (a, b) = RecoleccionDatos(Matriz2);
+                    (Valido, contador) = validar(contador, Matriz[a, b]);
+                }
+                Matriz2 = Juego(Matriz, Matriz2, a, b);
+                vector[1] = Matriz[a,b];
+                Console.Clear();
+                ImprimirMatrizStr(0, Matriz2);
+                if (Valido == true)
+                {
+                    Console.WriteLine("Números correctos...");
+                    count += 1;
+                    Console.WriteLine("Cantidad de aciertos: " + count);
+                }
+                else
+                {
+                    Console.WriteLine("Números incorrectos...");
+                    count = 0;
+                    Matriz2 = BorradoModoFacil(vector, Matriz, Matriz2);
+                    Console.WriteLine("Cantidad de aciertos: " + count);
+                    
+                }
+
+                Thread.Sleep(4000);
+                Console.Clear();
+            }
+            ImprimirMatrizStr(200, Matriz2);
+            Console.WriteLine("¡Felicidades!, has ganado");
+        }
         static void ModoDificil()
         {
             // Llenado de la matriz principal con numeros random, sin repetir
@@ -286,12 +391,8 @@ namespace PincheProgramaCuleroooooo
                 /*###############################################################*/
                 while (NoRepetido(Convert.ToString(Matriz[a, b]), Matriz2) == true)
                 {
-                    if (NoRepetido(Convert.ToString(Matriz[a, b]),Matriz2) == false)
-                    {
-                        break;
-                    }
                     Console.Clear();
-                    ImprimirMatrizStr(0,Matriz2);
+                    ImprimirMatrizStr(0, Matriz2);
                     Console.WriteLine("El número está repetido...");
                     (a, b) = RecoleccionDatos(Matriz2);
                     (Valido, contador) = validar(contador, Matriz[a, b]);
@@ -302,12 +403,8 @@ namespace PincheProgramaCuleroooooo
                 (Valido, contador) = validar(contador, Matriz[a, b]);
                 while (NoRepetido(Convert.ToString(Matriz[a, b]), Matriz2) == true)
                 {
-                    if (NoRepetido(Convert.ToString(Matriz[a, b]),Matriz2) == false)
-                    {
-                        break;
-                    }
                     Console.Clear();
-                    ImprimirMatrizStr(0,Matriz2);
+                    ImprimirMatrizStr(0, Matriz2);
                     Console.WriteLine("El número está repetido...");
                     (a, b) = RecoleccionDatos(Matriz2);
                     (Valido, contador) = validar(contador, Matriz[a, b]);
@@ -316,7 +413,6 @@ namespace PincheProgramaCuleroooooo
                 if (Valido == true)
                 {
                     Console.Clear();
-                    ImprimirMatrizStr(0,Matriz2);
                     Console.WriteLine("Números correctos...");
                     count += 1;
                     Console.WriteLine("Cantidad de aciertos: " + count);
@@ -324,7 +420,6 @@ namespace PincheProgramaCuleroooooo
                 else
                 {
                     Console.Clear();
-                    ImprimirMatrizStr(0,Matriz2);
                     Console.WriteLine("Números incorrectos...");
                     count = 0;
                     Matriz2 = LlenadoCortina();
@@ -332,15 +427,14 @@ namespace PincheProgramaCuleroooooo
                     Thread.Sleep(2000);
                     Console.Clear();
                     Console.WriteLine("Demos otro repaso a la tabla...");
-                    ImprimirMatrizInt(100,Matriz);
+                    ImprimirMatrizInt(100, Matriz);
                 }
 
                 Thread.Sleep(4000);
                 Console.Clear();
             }
-            ImprimirMatrizStr(200,Matriz2);
+            ImprimirMatrizStr(200, Matriz2);
             Console.WriteLine("¡Felicidades!, has ganado");
-            Console.Read();
         }
         static void Escribir(int velocidad, string texto)
         {
@@ -398,7 +492,8 @@ namespace PincheProgramaCuleroooooo
             if (modo == "1")
             {
                 Console.Clear();
-                Escribir(100,"Bienvenido al modo fácil");
+                Cancion();
+                Escribir(100, "Bienvenido al modo fácil");
                 Thread.Sleep(2000);
                 Console.Clear();
                 ModoFacil();
@@ -406,7 +501,8 @@ namespace PincheProgramaCuleroooooo
             else
             {
                 Console.Clear();
-                Escribir(100,"Bienvenido al modo dificil");
+                Cancion();
+                Escribir(100, "Bienvenido al modo dificil");
                 Thread.Sleep(2000);
                 Console.Clear();
                 ModoDificil();

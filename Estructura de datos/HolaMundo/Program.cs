@@ -144,6 +144,7 @@ namespace Introducir
     }
 }
 */
+/*
 class Program
 {
     public static void Main(string[] args)
@@ -154,3 +155,109 @@ class Program
         Console.WriteLine(y + " " + z);
     }
 }
+*/
+/*
+using System.Diagnostics;
+using System.ComponentModel;
+namespace MyProcessSample
+{
+    class MyProcess
+    {
+        static void Main(string[] args)
+
+        {
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("gnome-terminal", "ls");
+            procStartInfo.RedirectStandardOutput = false;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo = procStartInfo;
+            proc.Start();
+            Console.WriteLine(proc.StandardOutput.ReadToEnd());
+
+        }
+
+    }
+}
+*/
+using System.Diagnostics;
+
+public class StartingProcesses
+{
+    public static void Main()
+    {
+        ProcessStartInfo startInfo = new ProcessStartInfo();
+        startInfo.FileName = "/usr/bin/comando";
+        startInfo.Arguments = "argumento1";
+        Process.Start(startInfo);
+    }
+}
+
+/*
+namespace MyProcessSample
+{
+    class MyProcess
+    {
+
+        public static void Main()
+        {
+            try
+            {
+                using (Process myProcess = new Process())
+                {
+                    myProcess.StartInfo.UseShellExecute = true;
+                    // You can start any process, HelloWorld is a do-nothing example.
+                    myProcess.StartInfo.FileName = "gnome-terminal";
+                    myProcess.StartInfo.Arguments = "play /home/d2022f/Music/Geoxor - Stardust.mp3";
+                    myProcess.StartInfo.CreateNoWindow = true;
+                    myProcess.Start();
+                    Console.Read();
+                    
+                    // This code assumes the process you are starting will terminate itself.
+                    // Given that it is started without a window so you cannot terminate it
+                    // on the desktop, it must terminate itself or you can do it programmatically
+                    // from this application using the Kill method.
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}
+*/
+
+/*
+namespace Execute
+{
+    class Execute
+    {
+        static void ExecuteCommand()
+        {
+            string _Command = "ls";
+            //Indicamos que deseamos inicializar el proceso cmd.exe junto a un comando de arranque. 
+            //(/C, le indicamos al proceso cmd que deseamos que cuando termine la tarea asignada se cierre el proceso).
+            //Para mas informacion consulte la ayuda de la consola con cmd.exe /? 
+            System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("gnome-terminal", _Command);
+            // Indicamos que la salida del proceso se redireccione en un Stream
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            //Indica que el proceso no despliegue una pantalla negra (El proceso se ejecuta en background)
+            procStartInfo.CreateNoWindow = false;
+            //Inicializa el proceso
+            System.Diagnostics.Process proc = new System.Diagnostics.Process();
+            proc.StartInfo = procStartInfo;
+            proc.Start();
+            //Consigue la salida de la Consola(Stream) y devuelve una cadena de texto
+            string result = proc.StandardOutput.ReadToEnd();
+            //Muestra en pantalla la salida del Comando
+            Console.WriteLine(result);
+        }
+        static void Main(string[] args)
+        {
+            ExecuteCommand();
+        }
+    }
+}
+*/
