@@ -6,7 +6,7 @@ namespace PincheProgramaCuleroooooo
 {
     class Program
     {
-        // Funcion para comparar los números de la matriz
+        // Compara los números de la matriz
         static bool Comparar(int[,] Matriz, int numero)
         {
             for (int i = 0; i < 4; i++)
@@ -101,7 +101,7 @@ namespace PincheProgramaCuleroooooo
             }
             return Matriz2;
         }
-        // Función para intercambio de datos entre las matrices
+        // Intercambio de datos entre las matrices
         static string[,] Juego(int[,] Matriz, string[,] Matriz2, int a, int b)
         {
             for (int i = 0; i < 4; i++)
@@ -116,6 +116,7 @@ namespace PincheProgramaCuleroooooo
             }
             return Matriz2;
         }
+        // Entrada de datos por teclado y validación de los mismos
         public static (int, int) RecoleccionDatos(string[,] Matriz2)
         {
             int a = 0, b = 0, c = 0;
@@ -198,6 +199,7 @@ namespace PincheProgramaCuleroooooo
             }
             return (a, b);
         }
+        // Reproduce una canción
         static void Cancion()
         {
             try
@@ -205,15 +207,9 @@ namespace PincheProgramaCuleroooooo
                 using (Process myProcess = new Process())
                 {
                     myProcess.StartInfo.UseShellExecute = false;
-                    // You can start any process, HelloWorld is a do-nothing example.
                     myProcess.StartInfo.FileName = "./bash.sh";
                     myProcess.StartInfo.CreateNoWindow = true;
                     myProcess.Start();
-                    
-                    // This code assumes the process you are starting will terminate itself.
-                    // Given that it is started without a window so you cannot terminate it
-                    // on the desktop, it must terminate itself or you can do it programmatically
-                    // from this application using the Kill method.
                 }
             }
             catch (Exception e)
@@ -221,11 +217,12 @@ namespace PincheProgramaCuleroooooo
                 Console.WriteLine(e.Message);
             }
         }
+        // Llenado de la matriz con números random, de manea aleatoria
         static int[,] LlenadoPrincipal()
         {
             Random num = new Random();
             int[,] Matriz = new int[4, 7];
-            for (int i = 0; i < 4; i++) // matriz con numeros random
+            for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 7; j++)
                 {
@@ -239,6 +236,7 @@ namespace PincheProgramaCuleroooooo
             }
             return Matriz;
         }
+        // Función para el borrado de la tabla string por pocisión
         public static string [,] BorradoModoFacil(int[] vector, int [,] Matriz, string[,] Matriz2)
         {
             for (int i = 0; i < 2; i++)
@@ -256,6 +254,7 @@ namespace PincheProgramaCuleroooooo
             }
             return Matriz2;
         }
+        // Validación de la sumatroria de los números destapados
         public static (bool, int) validar(int contador, int numero)
         {
             contador = contador + numero;
@@ -268,6 +267,7 @@ namespace PincheProgramaCuleroooooo
                 return (false, contador);
             }
         }
+        // Validación de entrada dosnde se limita la apertura de las casillas a una sola vez
         public static bool NoRepetido(string dato, string[,] Matriz2)
         {
             bool repetido = false;
@@ -284,6 +284,7 @@ namespace PincheProgramaCuleroooooo
             }
             return repetido;
         }
+        //Limitación de entrada a ciertos datos
         static bool MensajeError(string dato)
         {
             if (dato == "1" || dato == "2" || dato == "3" || dato == "4" || dato == "5" || dato == "6" || dato == "0")
@@ -299,17 +300,16 @@ namespace PincheProgramaCuleroooooo
                 return true;
             }
         }
+        // Ejecución del modo fácil
         static void ModoFacil()
         {
-            // Llenado de la matriz principal con numeros random, sin repetir
             Random num = new Random();
             int[,] Matriz = new int[4, 7];
             int count = 0;
             string[,] Matriz2 = new string[4, 7];
             int [] vector = new int[2];
-            Matriz2 = LlenadoCortina(); // matriz con asteriscos
+            Matriz2 = LlenadoCortina(); 
             Matriz = LlenadoPrincipal();
-            // Recolección de datos e impresión de matriz
             ImprimirMatrizStr(100, Matriz2);
             Console.Clear();
             while (count < 14)
@@ -368,16 +368,15 @@ namespace PincheProgramaCuleroooooo
             ImprimirMatrizStr(200, Matriz2);
             Console.WriteLine("¡Felicidades!, has ganado");
         }
+        // Ejecución del modo dificil
         static void ModoDificil()
         {
-            // Llenado de la matriz principal con numeros random, sin repetir
             Random num = new Random();
             int[,] Matriz = new int[4, 7];
             int count = 0;
             string[,] Matriz2 = new string[4, 7];
-            Matriz2 = LlenadoCortina(); // matriz con asteriscos
+            Matriz2 = LlenadoCortina();
             Matriz = LlenadoPrincipal();
-            // Recolección de datos e impresión de matriz
             ImprimirMatrizInt(100, Matriz);
             Console.Clear();
             while (count < 14)
@@ -387,8 +386,6 @@ namespace PincheProgramaCuleroooooo
                 ImprimirMatrizStr(100, Matriz2);
                 (a, b) = RecoleccionDatos(Matriz2);
                 (Valido, contador) = validar(contador, Matriz[a, b]);
-                //Verifica que los números no estén duplicados
-                /*###############################################################*/
                 while (NoRepetido(Convert.ToString(Matriz[a, b]), Matriz2) == true)
                 {
                     Console.Clear();
@@ -397,7 +394,6 @@ namespace PincheProgramaCuleroooooo
                     (a, b) = RecoleccionDatos(Matriz2);
                     (Valido, contador) = validar(contador, Matriz[a, b]);
                 }
-                /*###############################################################*/
                 Matriz2 = Juego(Matriz, Matriz2, a, b);
                 (a, b) = RecoleccionDatos(Matriz2);
                 (Valido, contador) = validar(contador, Matriz[a, b]);
@@ -436,6 +432,7 @@ namespace PincheProgramaCuleroooooo
             ImprimirMatrizStr(200, Matriz2);
             Console.WriteLine("¡Felicidades!, has ganado");
         }
+        // Animación de escritura
         static void Escribir(int velocidad, string texto)
         {
             string texto2 = "";
@@ -450,6 +447,7 @@ namespace PincheProgramaCuleroooooo
                 Thread.Sleep(velocidad);
             }
         }
+        // Limmite la elección de los modos a la entrada del número "1" y el número "2".
         static (bool, int) EntradaInvalida(string modo, bool success)
         {
             int x = 0;
@@ -465,6 +463,7 @@ namespace PincheProgramaCuleroooooo
             }
             return (success, x);
         }
+        // Ejecución del código
         static void Main(string[] args)
         {
             Escribir(100, "Bienvenido a nuestro memorama");
