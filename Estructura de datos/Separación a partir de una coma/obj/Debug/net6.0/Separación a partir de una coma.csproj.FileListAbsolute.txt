@@ -1,0 +1,15 @@
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/Separación a partir de una coma
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/Separación a partir de una coma.deps.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/Separación a partir de una coma.runtimeconfig.json
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/Separación a partir de una coma.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/ref/Separación a partir de una coma.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/bin/Debug/net6.0/Separación a partir de una coma.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.csproj.AssemblyReference.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.GeneratedMSBuildEditorConfig.editorconfig
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.AssemblyInfoInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.AssemblyInfo.cs
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.csproj.CoreCompileInputs.cache
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/ref/Separación a partir de una coma.dll
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.pdb
+/home/d2022f/Documents/UP210762_CPP/Estructura de datos/Separación a partir de una coma/obj/Debug/net6.0/Separación a partir de una coma.genruntimeconfig.cache

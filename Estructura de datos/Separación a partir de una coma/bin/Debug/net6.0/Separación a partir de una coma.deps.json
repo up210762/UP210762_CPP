@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Separación a partir de una coma/1.0.0": {
+        "runtime": {
+          "Separación a partir de una coma.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Separación a partir de una coma/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
